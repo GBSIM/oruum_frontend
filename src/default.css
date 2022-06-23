@@ -132,6 +132,7 @@ span {
 	span {
 		font-size: 16px;
 	}
+	
 }
 
 @media (max-width: 600px) {
@@ -147,14 +148,13 @@ span {
 	span {
 		font-size: 14px;
 	}
-
 	.page {
 		flex-direction: column;
 	}
-	.page-contents {
-		padding-bottom: 100px;
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-top: 20px;
+	.main-center-contents {
+		width: 95%;
+	}
+	.unit-box {
+		width: 100%;
 	}
 }
