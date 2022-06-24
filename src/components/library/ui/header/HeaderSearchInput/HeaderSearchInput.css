@@ -30,6 +30,10 @@
         width: 40px;
         justify-content: center;
     }
+
+    .header-search-input-container:hover {
+        background: #EFEFEF;
+    }
     .header-search-input-icon {
         margin: 0;
     }

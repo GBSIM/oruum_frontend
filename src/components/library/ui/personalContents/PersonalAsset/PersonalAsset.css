@@ -1,0 +1,42 @@
+.personal-asset-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.personal-asset-profile-image {
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0);
+    border: 1px solid #F8F8F8;
+    border-radius: 100px;
+}
+
+.stock-holder-bar {
+    background: #F5F5F4;
+    border-radius: 5px;
+    width: 50px;
+    height: 150px;
+}
+
+.stock-holder-bar-image {
+    width: 33px;
+    height: 33px;
+}
+
+.personal-asset-stock-hold-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 10px;
+}
+
+@media (max-width:1500px) {
+    .personal-asset-profile-image {
+        width: 90px;
+        height: 90px;
+    }
+}
