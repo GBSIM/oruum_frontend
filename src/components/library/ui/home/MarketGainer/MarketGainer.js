@@ -4,7 +4,7 @@ import CountrySelector from "../../unit/CountrySelector/CountrySelector"
 export default function MarketGainer() {
     return (
         <div>
-            <h3 style={{color:'#333333',margin:'0'}}>오늘 최고의 상승세!</h3>
+            <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 상승세!</h2>
             <div style={{minHeight:'20px'}}></div>
             <CountrySelector></CountrySelector>
             <div style={{minHeight:'20px'}}></div>

@@ -3,7 +3,7 @@ import PriceRow from "../../unit/PriceRow/PriceRow"
 export default function MarketSummary() {
     return (
         <div>
-            <h3 style={{color:'#333333',margin:'0'}}>오늘의 지수</h3>
+            <h2 style={{color:'#333333',margin:'0'}}>오늘의 지수</h2>
             <div style={{minHeight:'15px'}}></div>
             <PriceRow
                 image={require('../../images/Icon/icon_south_korea.png')}

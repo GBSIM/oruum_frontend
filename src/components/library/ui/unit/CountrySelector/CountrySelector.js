@@ -12,7 +12,7 @@ export default function CountrySelector(props) {
                         <h3 className="country-selector-button-text off">미국</h3>
                     </button>
                 </div>
-                <div style={{width:'90%',marginLeft:'5%',marginRight:'5%',height:'1px',background:'#DCDCDC'}}></div>
+                <div style={{width:'100%',height:'1px',background:'#DCDCDC'}}></div>
             </div>
         )
     } else {
@@ -26,7 +26,7 @@ export default function CountrySelector(props) {
                         <h3 className="country-selector-button-text on">미국</h3>
                     </button>
                 </div>
-                <div style={{width:'90%',marginLeft:'5%',marginRight:'5%',height:'1px',background:'#DCDCDC'}}></div>
+                <div style={{width:'100%',height:'1px',background:'#DCDCDC'}}></div>
             </div>
         )
     }
