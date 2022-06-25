@@ -22,6 +22,7 @@ export default function StockCheckPoint() {
                 checkPoints={['과도하게 높은 이익 대비 주가',
                               '테슬라의 CEO 일런 머스크의 기행들!',
                               '테슬라 혁신성의 일런 머스크 의존도, 머스크 없이도 잘 클 수 있을까?']}></CheckPoints>
+            <div style={{height:'30px'}}></div>
         </div>
     )
 }
