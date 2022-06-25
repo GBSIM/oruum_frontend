@@ -18,6 +18,7 @@
 
 .stock-detail-select-button {
     background: rgba(0,0,0,0);
+    font-weight: 500;
 }
 
 .stock-detail-select-button.on {

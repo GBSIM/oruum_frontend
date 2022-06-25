@@ -1,4 +1,5 @@
 import './StockDetail.css';
+import StockIncome from '../StockIncome/StockIncome';
 
 export default function StockDetail() {
     return (
@@ -11,7 +12,8 @@ export default function StockDetail() {
             <div style={{height:'20px'}}></div>
             <StockDetailSelector></StockDetailSelector>
             <div>
-
+                <div style={{height:'15px'}}></div>
+                <StockIncome></StockIncome>
             </div>
             <div style={{height:'30px'}}></div>
         </div>
