@@ -80,4 +80,7 @@
     .top-header-logo {
         height: 30px; 
     }
+    .top-header-circle-button {
+        background: rgba(255,255,255,0);
+    }
 }
