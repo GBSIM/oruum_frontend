@@ -1,0 +1,53 @@
+.stock-check-point-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.stock-check-point-title {
+    margin: 0;
+    color: #333333;
+}
+
+.check-points-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.check-points-title-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+
+.check-points-title {
+    margin: 0;
+    color: #333333;
+}
+
+.check-point-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.check-point-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin-top: 2px;
+}
+
+.check-points-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.check-point-text {
+    color: #696969;
+}
