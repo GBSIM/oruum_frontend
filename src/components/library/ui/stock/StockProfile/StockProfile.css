@@ -1,0 +1,136 @@
+.stock-profile-row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.stock-profile-korean-name {
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+}
+
+.stock-profile-english-name {
+    font-weight: 500;
+    color: #DCDCDC;
+}
+
+.stock-profile-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.stock-profile-current-price {
+    color: #333333;
+    margin: 0;
+}
+
+.stock-profile-daily-change {
+    color: #34B199;
+    margin: 0;
+}
+
+.period-button {
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.period-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.period-button.on {
+    color: #fff;
+    background: #34B199
+}
+
+.period-button.off {
+    color: #B9B9B9;
+    background: #fff;
+}
+
+.stock-price-min-max-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.stock-price-min-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.stock-price-min-title {
+    color: #B9B9B9;
+}
+
+.stock-price-min {
+    color: #F15E5E;
+}
+
+.stock-price-max-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.stock-price-max-title {
+    color: #B9B9B9;
+}
+
+.stock-price-max {
+    color: #34B199;
+}
+
+.stock-falling-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    width: 90%;
+}
+
+.stock-falling-price-text {
+    color: #696969;
+    font-weight: 500;
+}
+
+.stock-falling-price {
+    color: #F15E5E;
+}
+
+.stock-profile-spacer-level1 {
+    height: 20px;
+}
+
+.stock-profile-spacer-level2 {
+    height: 30px;
+}
+
+.stock-profile-spacer-level3 {
+    height: 50px;
+}
+
+@media (max-width: 1500px) {
+    .stock-profile-spacer-level1 {
+        height: 10px;
+    }
+    .stock-profile-spacer-level2 {
+        height: 20px;
+    }
+    .stock-profile-spacer-level3 {
+        height: 30px;
+    }
+}
