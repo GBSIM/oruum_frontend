@@ -17,7 +17,7 @@ export default function HomePage() {
             <TopHeader></TopHeader>
             <div className="main-contents">
                 <div className="main-center-contents">
-                    <div style={{minHeight:'20px'}}></div>
+                    <div className="home-page-top-space"></div>
                     <div className="unit-box">
                         <MarketSummary></MarketSummary>
                     </div>

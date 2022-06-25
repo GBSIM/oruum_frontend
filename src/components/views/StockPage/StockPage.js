@@ -11,8 +11,8 @@ export default function StockPage() {
             <TopHeader></TopHeader>
             <div className='main-contents'>
                 <div className='main-center-contents'>
-                    <div style={{minHeight:'20px'}}></div>
-                    <div className="unit-box">
+                    <div className='stock-page-top-space'></div>
+                    <div className="unit-box stock-profile">
                         <StockProfile></StockProfile>
                     </div>
                 </div>

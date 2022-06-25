@@ -71,3 +71,13 @@
         flex: 0;
     }
 }
+
+@media (max-width: 600px) {
+    .top-header-container {
+        height: 50px;
+        box-shadow: none
+    }
+    .top-header-logo {
+        height: 30px; 
+    }
+}

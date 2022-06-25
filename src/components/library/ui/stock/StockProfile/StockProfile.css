@@ -43,7 +43,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
 }
 
 .period-button.on {
@@ -54,6 +54,10 @@
 .period-button.off {
     color: #B9B9B9;
     background: #fff;
+}
+
+.period-button.off:hover {
+    color: #696969;
 }
 
 .stock-price-min-max-container {
@@ -132,5 +136,12 @@
     }
     .stock-profile-spacer-level3 {
         height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .period-button {
+        padding: 5px 15px 5px 15px;
+        border-radius: 6px;
     }
 }
