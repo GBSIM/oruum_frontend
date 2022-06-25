@@ -7,21 +7,21 @@ export default function StockProfile() {
         <div>
             <div className='stock-profile-spacer-level1 top'></div>
             <div className="stock-profile-row-container">
-                <h3 className="stock-profile-korean-name">애플</h3>
+                <h3 className="stock-profile-korean-name">테슬라</h3>
             </div>
             <div className="stock-profile-row-container">
-                <span className="stock-profile-english-name">Apple Inc. (AAPL)</span>
+                <span className="stock-profile-english-name">Tesla, Inc. (TSLA)</span>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <img src={require('../../images/StockLogo/logo_aapl.png')} className='stock-profile-icon'></img>
+                <img src={require('../../images/StockLogo/logo_tsla.png')} className='stock-profile-icon'></img>
             </div>
             <div className='stock-profile-spacer-level3'></div>
             <div className="stock-profile-row-container">
-                <h2 className="stock-profile-current-price">$135.43</h2>
+                <h2 className="stock-profile-current-price">$737.12</h2>
             </div>
             <div className="stock-profile-row-container">
-                <h3 className="stock-profile-daily-change">+2.35 (1.74%)</h3>
+                <h3 className="stock-profile-daily-change">+25.35 (4.75%)</h3>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
@@ -38,7 +38,7 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <StockFallingPrice name='애플' fallingPrice='$46.32' fallingPercentage={32.2}></StockFallingPrice>
+                <StockFallingPrice fallingPrice='$46.32' fallingPercentage={32.2}></StockFallingPrice>
             </div>
 
             <div className='stock-profile-spacer-level3'></div>
@@ -103,7 +103,7 @@ function StockFallingPrice(props) {
     return (
         <div className='stock-falling-price-container'>
             <div className='stock-falling-price-text-container'>
-                <span className='stock-falling-price-text'>{props.name}은 최고가 대비</span>
+                <span className='stock-falling-price-text'>최고가 대비</span>
             </div>
             <div style={{width:'10px'}}></div>
             <div className='stock-falling-price-text-container'>
