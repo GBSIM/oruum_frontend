@@ -54,13 +54,8 @@
 .top-header-circle-button-image {
     height: 20px;
     width: 20px;
-    background: rgba(0,0,0,0);
-}
-
-.top-header-circle-button-image-container {
-    height: 20px;
-    width: 20px;
     min-width: 20px;
+    background: rgba(0,0,0,0);
 }
 
 @media (max-width: 1024px) {
