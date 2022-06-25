@@ -82,7 +82,6 @@ function StockBasicInfos(props) {
             <StockBasicInfo title='52주 최고' value={'$1243.49'}></StockBasicInfo>
             <StockBasicInfo title='52주 최저' value={'$620.46'}></StockBasicInfo>
             <StockBasicInfo title='PER' value={'99.61'}></StockBasicInfo>
-            <StockBasicInfo title='PSR' value={'24.21'}></StockBasicInfo>
         </div>
     )
 }

@@ -7,6 +7,8 @@ import StockProfile from '../../library/ui/stock/StockProfile/StockProfile';
 import StockCheckPoint from '../../library/ui/stock/StockCheckPoint/StockCheckPoint';
 import StockDetail from '../../library/ui/stock/StockDetail/StockDetail';
 
+import PersonalTrading from '../../library/ui/personalContents/PersonalTrading/PersonalTrading';
+
 export default function StockPage() {
     return (
         <div className='page'>
@@ -28,7 +30,9 @@ export default function StockPage() {
                 </div>
             </div>
             <BottomNavMenuBar></BottomNavMenuBar>
-            
+            <div className="main-right-contents">
+                <PersonalTrading></PersonalTrading>
+            </div>            
         </div>
     )
 }
