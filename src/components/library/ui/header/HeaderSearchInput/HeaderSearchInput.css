@@ -44,4 +44,9 @@
     .header-search-input-container {
         background: rgba(255,255,255,0);
     }
+    .header-search-input-icon {
+        height: 26px;
+        width: 26px;
+        min-width: 26px;
+    }
 }

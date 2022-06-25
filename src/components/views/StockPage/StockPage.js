@@ -5,6 +5,7 @@ import TopHeader from '../../library/ui/header/TopHeader/TopHeader';
 
 import StockProfile from '../../library/ui/stock/StockProfile/StockProfile';
 import StockCheckPoint from '../../library/ui/stock/StockCheckPoint/StockCheckPoint';
+import StockDetail from '../../library/ui/stock/StockDetail/StockDetail';
 
 export default function StockPage() {
     return (
@@ -19,6 +20,10 @@ export default function StockPage() {
                     <div style={{height:'20px'}}></div>
                     <div className="unit-box">
                         <StockCheckPoint></StockCheckPoint>
+                    </div>
+                    <div style={{height:'20px'}}></div>
+                    <div className="unit-box">
+                        <StockDetail></StockDetail>
                     </div>
                 </div>
             </div>

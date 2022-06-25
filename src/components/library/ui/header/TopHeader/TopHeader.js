@@ -14,11 +14,10 @@ export default function TopHeader(props) {
                 <TopNavMenuBar></TopNavMenuBar>
             </div>
             <div className='top-header-right-container'>
-                <div style={{minWidth:'10px'}}></div>
+                <div style={{minWidth:'0px'}}></div>
                 <button className='top-header-circle-button'>
                     <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_notification_dark_grey.png')}></img>
                 </button>
-                <div style={{minWidth:'10px'}}></div>
                 <button className='top-header-circle-button'>
                     <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_more_dark_grey.png')}></img>
                 </button>
