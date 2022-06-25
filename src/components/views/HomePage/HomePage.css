@@ -13,4 +13,7 @@
     .home-page-top-space {
         height: 0px;
     }
+    .unit-box.home-top {
+        border-top: none;
+    }
 }

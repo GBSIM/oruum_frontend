@@ -7,7 +7,7 @@ export default function StockProfile() {
         <div>
             <div className='stock-profile-spacer-level1 top'></div>
             <div className="stock-profile-row-container">
-                <h3 className="stock-profile-korean-name">테슬라</h3>
+                <h2 className="stock-profile-korean-name">테슬라</h2>
             </div>
             <div className="stock-profile-row-container">
                 <span className="stock-profile-english-name">Tesla, Inc. (TSLA)</span>
@@ -18,7 +18,7 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level3'></div>
             <div className="stock-profile-row-container">
-                <h2 className="stock-profile-current-price">$737.12</h2>
+                <h1 className="stock-profile-current-price">$737.12</h1>
             </div>
             <div className="stock-profile-row-container">
                 <h3 className="stock-profile-daily-change">+25.35 (4.75%)</h3>
@@ -83,17 +83,17 @@ function StockPriceMinMax(props) {
                 <span className='stock-price-min-title'>
                     52주 최저
                 </span>
-                <h3 className='stock-price-min'>
+                <h2 className='stock-price-min'>
                     {props.minimumPrice}
-                </h3>
+                </h2>
             </div>
             <div className='stock-price-max-container'>
                 <span className='stock-price-max-title'>
                     52주 최고
                 </span>
-                <h3 className='stock-price-max'>
+                <h2 className='stock-price-max'>
                     {props.maximumPrice}
-                </h3>
+                </h2>
             </div>
         </div>
     )

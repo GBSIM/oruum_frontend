@@ -14,7 +14,7 @@
 
 .stock-profile-english-name {
     font-weight: 500;
-    color: #DCDCDC;
+    color: #B9B9B9;
 }
 
 .stock-profile-icon {
@@ -48,7 +48,7 @@
 
 .period-button.on {
     color: #fff;
-    background: #9AD8CD
+    background: #34B199
 }
 
 .period-button.off {
