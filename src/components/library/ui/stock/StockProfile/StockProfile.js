@@ -5,7 +5,7 @@ import { Line } from 'react-chartjs-2';
 export default function StockProfile() {
     return (
         <div>
-            <div className='stock-profile-spacer-level1'></div>
+            <div className='stock-profile-spacer-level1 top'></div>
             <div className="stock-profile-row-container">
                 <h3 className="stock-profile-korean-name">애플</h3>
             </div>
@@ -102,11 +102,15 @@ function StockPriceMinMax(props) {
 function StockFallingPrice(props) {
     return (
         <div className='stock-falling-price-container'>
-            <span className='stock-falling-price-text'>{props.name}은 최고가 대비</span>
+            <div className='stock-falling-price-text-container'>
+                <span className='stock-falling-price-text'>{props.name}은 최고가 대비</span>
+            </div>
             <div style={{width:'10px'}}></div>
-            <h2 className='stock-falling-price'>{props.fallingPrice}({props.fallingPercentage}$)</h2>
-            <div style={{width:'10px'}}></div>
-            <span className='stock-falling-price-text'>하락했어요.</span>
+            <div className='stock-falling-price-text-container'>
+                <h2 className='stock-falling-price'>{props.fallingPrice}({props.fallingPercentage}$)</h2>
+                <div style={{width:'10px'}}></div>
+                <span className='stock-falling-price-text'>하락했어요.</span>
+            </div>
         </div>
     )
 }

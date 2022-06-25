@@ -106,6 +106,13 @@
     width: 90%;
 }
 
+.stock-falling-price-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
 .stock-falling-price-text {
     color: #696969;
     font-weight: 500;
@@ -140,8 +147,19 @@
 }
 
 @media (max-width: 600px) {
+    .stock-profile-spacer-level1.top {
+        height: 0px;
+    }
     .period-button {
         padding: 5px 15px 5px 15px;
         border-radius: 6px;
+    }
+    .stock-falling-price-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .stock-falling-price-text-container {
+        width: 100%;
     }
 }
