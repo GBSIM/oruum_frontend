@@ -4,6 +4,7 @@ import BottomNavMenuBar from '../../library/ui/nav/BottomNavMenuBar/BottomNavMen
 import TopHeader from '../../library/ui/header/TopHeader/TopHeader';
 
 import StockProfile from '../../library/ui/stock/StockProfile/StockProfile';
+import StockCheckPoint from '../../library/ui/stock/StockCheckPoint/StockCheckPoint';
 
 export default function StockPage() {
     return (
@@ -14,6 +15,10 @@ export default function StockPage() {
                     <div className='stock-page-top-space'></div>
                     <div className="unit-box stock-profile">
                         <StockProfile></StockProfile>
+                    </div>
+                    <div style={{height:'20px'}}></div>
+                    <div className="unit-box">
+                        <StockCheckPoint></StockCheckPoint>
                     </div>
                 </div>
             </div>

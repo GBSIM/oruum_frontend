@@ -57,6 +57,12 @@
     background: rgba(0,0,0,0);
 }
 
+.top-header-circle-button-image-container {
+    height: 20px;
+    width: 20px;
+    min-width: 20px;
+}
+
 @media (max-width: 1024px) {
     .top-header-nav-menu-bar-container {
         display: none;
