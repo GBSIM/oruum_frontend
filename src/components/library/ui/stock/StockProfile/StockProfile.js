@@ -34,7 +34,7 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <StockPriceMinMax minimumPrice={'$121.28'} maximumPrice={'$181.39'}></StockPriceMinMax>
+                <StockBasicInfos></StockBasicInfos>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
@@ -74,6 +74,26 @@ function PeriodButton(props) {
             </button>
         )
     }
+}
+
+function StockBasicInfos(props) {
+    return (
+        <div className='stock-basic-infos-container'>
+            <StockBasicInfo title='52주 최고' value={'$1243.49'}></StockBasicInfo>
+            <StockBasicInfo title='52주 최저' value={'$620.46'}></StockBasicInfo>
+            <StockBasicInfo title='PER' value={'99.61'}></StockBasicInfo>
+            <StockBasicInfo title='PSR' value={'24.21'}></StockBasicInfo>
+        </div>
+    )
+}
+
+function StockBasicInfo(props) {
+    return (
+        <div className='stock-basic-info-container'>
+            <span className='stock-basic-info-title'>{props.title}</span>
+            <h3 className='stock-basic-info-value'>{props.value}</h3>
+        </div>
+    )
 }
 
 function StockPriceMinMax(props) {

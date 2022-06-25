@@ -134,6 +134,23 @@
     height: 50px;
 }
 
+.stock-basic-info-title {
+    color: #B9B9B9;
+}
+
+.stock-basic-infos-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.stock-basic-info-value {
+    color: #333333;
+    margin: 0;
+}
+
 @media (max-width: 1500px) {
     .stock-profile-spacer-level1 {
         height: 10px;
