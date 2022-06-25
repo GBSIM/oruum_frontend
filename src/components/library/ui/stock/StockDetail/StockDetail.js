@@ -24,10 +24,16 @@ function StockDetailSelector() {
     return (
         <div className='stock-detail-selector'>
             <StockDetailSelectButton isOn={false} text='배당금'></StockDetailSelectButton>
+            <div style={{minWidth:'10px'}}></div>
             <StockDetailSelectButton isOn={false} text='제품군'></StockDetailSelectButton>
+            <div style={{minWidth:'10px'}}></div>
             <StockDetailSelectButton isOn={true} text='매출과 영업이익'></StockDetailSelectButton>
+            <div style={{minWidth:'10px'}}></div>
             <StockDetailSelectButton isOn={false} text='뉴스'></StockDetailSelectButton>
+            <div style={{minWidth:'10px'}}></div>
             <StockDetailSelectButton isOn={false} text='전문가 의견'></StockDetailSelectButton>
+            <div style={{minWidth:'10px'}}></div>
+            <StockDetailSelectButton isOn={false} text='목표주가'></StockDetailSelectButton>
         </div>
     )
 }
