@@ -38,7 +38,7 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <StockFallingPrice fallingPrice='$46.32' fallingPercentage={32.2}></StockFallingPrice>
+                <StockFallingPrice fallingPrice='$512.32' fallingPercentage={32.2}></StockFallingPrice>
             </div>
 
             <div className='stock-profile-spacer-level3'></div>
@@ -126,7 +126,7 @@ function StockFallingPrice(props) {
             </div>
             <div style={{width:'10px'}}></div>
             <div className='stock-falling-price-text-container'>
-                <h2 className='stock-falling-price'>{props.fallingPrice}({props.fallingPercentage}$)</h2>
+                <h2 className='stock-falling-price'>{props.fallingPrice}({props.fallingPercentage}%)</h2>
                 <div style={{width:'10px'}}></div>
                 <span className='stock-falling-price-text'>하락했어요.</span>
             </div>
