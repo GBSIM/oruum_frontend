@@ -7,7 +7,9 @@ export default function StockProfile() {
     const {ticker,koreanName,englishName,
            currentPrice,currency,lastDailyChange,lastDailyChangePercentage,
            yearlyHighestPrice,yearlyLowestPrice,
-           per,} = useSelector(state => state.stock);
+           per,
+           dateArray,closePriceArray,
+           fallingPrice,fallingPricePercentage} = useSelector(state => state.stock);
 
     let lastDailyChangeString;
     if (lastDailyChange >= 0) {
@@ -42,8 +44,8 @@ export default function StockProfile() {
             </div>
             <div className="stock-profile-row-container">
                 <LineGraph
-                    xdata={['2022-06-01','2022-06-02','2022-06-03','2022-06-04','2022-06-04','2022-06-04','2022-06-04','2022-06-04','2022-06-04','2022-06-04',]}
-                    ydata={[100,500,200,400,370,380,600,250,350,420]}></LineGraph>
+                    xdata={dateArray}
+                    ydata={closePriceArray}></LineGraph>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
@@ -55,7 +57,7 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <StockFallingPrice fallingPrice='$512.32' fallingPercentage={32.2}></StockFallingPrice>
+                <StockFallingPrice fallingPrice={fallingPrice} currency={currency} fallingPercentage={32.2}></StockFallingPrice>
             </div>
 
             <div className='stock-profile-spacer-level3'></div>
@@ -138,7 +140,7 @@ function StockFallingPrice(props) {
             </div>
             <div style={{width:'10px'}}></div>
             <div className='stock-falling-price-text-container'>
-                <h2 className='stock-falling-price'>{props.fallingPrice}({props.fallingPercentage}%)</h2>
+                <h2 className='stock-falling-price'>{props.currency}{props.fallingPrice} ({props.fallingPercentage}%)</h2>
                 <div style={{width:'10px'}}></div>
                 <span className='stock-falling-price-text'>하락했어요.</span>
             </div>
