@@ -1,16 +1,26 @@
 import './StockProfile.css';
 import LineGraph from '../../unit/LineGraph/LineGraph';
-import { Line } from 'react-chartjs-2';
+import { useSelector,useDispatch } from "react-redux";
 
 export default function StockProfile() {
+    const {ticker,koreanName,englishName,
+           currentPrice,currency,lastDailyChange,lastDailyChangePercentage} = useSelector(state => state.stock);
+
+    let lastDailyChangeString;
+    if (lastDailyChange >= 0) {
+        lastDailyChangeString = '+' + String(lastDailyChange);
+    } else {
+        lastDailyChangeString = String(lastDailyChange);
+    }
+
     return (
         <div>
             <div className='stock-profile-spacer-level1 top'></div>
             <div className="stock-profile-row-container">
-                <h2 className="stock-profile-korean-name">테슬라</h2>
+                <h2 className="stock-profile-korean-name">{koreanName}</h2>
             </div>
             <div className="stock-profile-row-container">
-                <span className="stock-profile-english-name">Tesla, Inc. (TSLA)</span>
+                <span className="stock-profile-english-name">{englishName} ({ticker})</span>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
@@ -18,10 +28,10 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level3'></div>
             <div className="stock-profile-row-container">
-                <h1 className="stock-profile-current-price">$737.12</h1>
+                <h1 className="stock-profile-current-price">{currency}{currentPrice}</h1>
             </div>
             <div className="stock-profile-row-container">
-                <h3 className="stock-profile-daily-change">+25.35 (4.75%)</h3>
+                <h3 className="stock-profile-daily-change">{lastDailyChangeString} ({lastDailyChangePercentage}%)</h3>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">

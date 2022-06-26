@@ -21,9 +21,9 @@ import { changePage } from './_reducers/pager';
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(()=> {
-    dispatch(getCurrentPrice('aapl'));
-  },[]);
+  // useEffect(()=> {
+  //   dispatch(getCurrentPrice('aapl'));
+  // },[]);
 
   const currentPath = window.location.pathname;
   if (currentPath === "/") {
