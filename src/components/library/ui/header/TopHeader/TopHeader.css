@@ -10,18 +10,16 @@
 }
 
 .top-header-login-button {
-    height: 40px;
-    padding: 5px 15px 5px 15px;
-    background: rgba(0,0,0,0);
+    padding: 7px 14px 7px 14px;
+    background: #34B199;
     border: 1px solid #34B199;
-    color: #34B199;
-    border-radius: 50px;
+    color: #fff;
+    border-radius: 10px;
     font-weight: 500;
 }
 
 .top-header-login-button:hover {
-    border: 1px solid rgba(52,177,153,0.8);
-    color: rgba(52,177,153,0.8);
+    background: rgba(52,177,153,0.8);
 }
 
 .top-header-left-container {
