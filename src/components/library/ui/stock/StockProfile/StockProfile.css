@@ -103,7 +103,7 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    width: 90%;
+    width: 100%;
 }
 
 .stock-falling-price-text-container {
@@ -159,7 +159,7 @@
         height: 20px;
     }
     .stock-profile-spacer-level3 {
-        height: 30px;
+        height: 20px;
     }
 }
 

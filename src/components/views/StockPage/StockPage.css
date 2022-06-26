@@ -35,6 +35,7 @@
     }
     .unit-box.stock-profile {
         border: 0px;
+        padding-top: 0;
     }
     
 }

@@ -1,0 +1,13 @@
+.economy-event-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.economy-event-image {
+    width: 40px;
+    height: 40px;
+}

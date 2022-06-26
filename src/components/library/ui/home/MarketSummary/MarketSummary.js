@@ -35,6 +35,7 @@ export default function MarketSummary() {
                 currentValue={3777.25}
                 change={42.27}
                 changePercentage={1.13}></PriceRow>
+            <div style={{minHeight:'30px'}}></div>
         </div>
     )
 }
