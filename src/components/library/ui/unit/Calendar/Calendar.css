@@ -89,6 +89,8 @@
         height: 16px;
         min-width: 16px;
         max-width: 16px;
+        min-height: 16px;
+        max-height: 16px;
         flex-shrink: 0;
     }
     .calendar-month-change-button-image {
@@ -96,6 +98,8 @@
         height: 12px;
         min-width: 12px;
         max-width: 12px;
+        min-height: 12px;
+        max-height: 12px;
         flex-shrink: 0;
     }
 }
