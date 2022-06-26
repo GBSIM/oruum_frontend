@@ -1,0 +1,42 @@
+.mini-price-row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #DCDCDC;
+    width: 100%;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.mini-price-row-image {
+    width: 33px;
+    height: 33px;
+}
+
+.mini-price-row-name {
+    color: #333333;
+    flex: 1;
+}
+
+.mini-price-row-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mini-price-row-price {
+    color: #333333;
+}
+
+.mini-price-row-price-daily-change {
+    color: #34B199;
+}
+
+.mini-price-row-price-daily-change.positive {
+    color: #34B199;
+}
+
+.mini-price-row-price-daily-change.negative {
+    color: #F15E5E;
+}
