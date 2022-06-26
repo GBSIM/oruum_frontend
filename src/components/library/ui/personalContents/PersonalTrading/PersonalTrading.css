@@ -1,0 +1,45 @@
+.personal-trading-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.personal-trading-row-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.trading-history-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 40px;
+    border-bottom: 1px solid #DCDCDC;
+    padding: 7px 5px 7px 5px;
+}
+
+.trading-history-date {
+    color: #B9B9B9;
+}
+
+.trading-history-price {
+    color: #696969;
+}
+
+.trading-history-share {
+    color: #34B199;
+}
+
+@media (max-height: 1500px) {
+    .personal-trading-calendar-container {
+        display: none;
+    }
+}
