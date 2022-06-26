@@ -44,7 +44,7 @@ export default function PersonalAsset() {
                 </div>
             </div>
             <div style={{height:'30px'}}></div>
-            <div className='personal-asset-row-container'>
+            <div className='personal-asset-row-container portfolio-stock-price'>
                 <MiniPriceRow
                     image={require('../../images/StockLogo/logo_aapl.png')}
                     koreanName='애플'
@@ -53,7 +53,7 @@ export default function PersonalAsset() {
                     currency={currency}
                     dailyChangePercentage={1.53}></MiniPriceRow>
             </div>
-            <div className='personal-asset-row-container'>
+            <div className='personal-asset-row-container portfolio-stock-price'>
                 <MiniPriceRow
                     image={require('../../images/StockLogo/logo_tsla.png')}
                     koreanName='테슬라'
@@ -62,7 +62,7 @@ export default function PersonalAsset() {
                     currency={currency}
                     dailyChangePercentage={4.52}></MiniPriceRow>
             </div>
-            <div className='personal-asset-row-container'>
+            <div className='personal-asset-row-container portfolio-stock-price'>
                 <MiniPriceRow
                     image={require('../../images/StockLogo/logo_nvda.png')}
                     koreanName='엔비디아'

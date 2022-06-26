@@ -40,3 +40,9 @@
         height: 90px;
     }
 }
+
+@media (max-height: 820px) {
+    .personal-asset-row-container.portfolio-stock-price {
+        display: none;
+    }
+}
