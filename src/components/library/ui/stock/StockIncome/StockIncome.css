@@ -4,13 +4,12 @@
     grid-template-rows: 100x 1fr 1px 1fr 1px 1fr;
     column-gap: 20px;
     row-gap: 15px;
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 20px;
 }
 
 .stock-income-title {
     margin: 0;
-    margin-left: 10px;
 }
 
 .unit-bar {
@@ -235,10 +234,12 @@
 
 @media (max-width: 600px) {
     .stock-income-container {
-        grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
         column-gap: 10px;
     }
     .income-bar-header-bar {
-        display: none;
+        height: 16px;
+        width: 4px;
+        border-radius: 2px;
     }
 }

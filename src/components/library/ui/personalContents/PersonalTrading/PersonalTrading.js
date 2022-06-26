@@ -21,20 +21,22 @@ export default function PersonalTrading() {
                     <div style={{height:'10px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
                         <span style={{color:'#B9B9B9'}}>평균매수가</span>
-                        <h2 style={{color:'#333333',margin:'0'}}>$510.52</h2>
+                        <h3 style={{color:'#333333',margin:'0'}}>$510.52</h3>
                     </div>
                     <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
                         <span style={{color:'#B9B9B9'}}>총 주식 수</span>
-                        <h2 style={{color:'#333333',margin:'0'}}>18주</h2>
+                        <h3 style={{color:'#333333',margin:'0'}}>18주</h3>
                     </div>
+                    <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
                         <span style={{color:'#B9B9B9'}}>투자 수익</span>
-                        <h2 style={{color:'#34B199',margin:'0'}}>+$2162.15 (21.6%)</h2>
+                        <h3 style={{color:'#34B199',margin:'0'}}>+$2162.15 (21.6%)</h3>
                     </div>
+                    <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
                         <span style={{color:'#B9B9B9'}}>투자 비중</span>
-                        <h2 style={{color:'#333333',margin:'0'}}>42.7%</h2>
+                        <h3 style={{color:'#333333',margin:'0'}}>42.7%</h3>
                     </div>
                 </div>
             </div>
