@@ -118,8 +118,8 @@ span {
 	padding-top: 20px;
 	width: 450px;
 	position: fixed;
-	top: 60px;
-	right: calc(50vw - 300px - 450px);
+	top: 60px;	
+	right: calc( ( 50vw - 250px ) / 2 - 225px );
 	background: rgba(0,0,0,0);
 }
 
