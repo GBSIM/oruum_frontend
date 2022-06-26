@@ -4,7 +4,9 @@ import { useSelector,useDispatch } from "react-redux";
 
 export default function StockProfile() {
     const {ticker,koreanName,englishName,
-           currentPrice,currency,lastDailyChange,lastDailyChangePercentage} = useSelector(state => state.stock);
+           currentPrice,currency,lastDailyChange,lastDailyChangePercentage,
+           yearlyHighestPrice,yearlyLowestPrice,
+           per,} = useSelector(state => state.stock);
 
     let lastDailyChangeString;
     if (lastDailyChange >= 0) {
@@ -44,7 +46,11 @@ export default function StockProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <StockBasicInfos></StockBasicInfos>
+                <StockBasicInfos
+                    currency={currency}
+                    yearlyHighestValue={yearlyHighestPrice}
+                    yearlyLowestValue={yearlyLowestPrice}
+                    per={per}></StockBasicInfos>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
@@ -89,9 +95,9 @@ function PeriodButton(props) {
 function StockBasicInfos(props) {
     return (
         <div className='stock-basic-infos-container'>
-            <StockBasicInfo title='52주 최고' value={'$1243.49'}></StockBasicInfo>
-            <StockBasicInfo title='52주 최저' value={'$620.46'}></StockBasicInfo>
-            <StockBasicInfo title='PER' value={'99.61'}></StockBasicInfo>
+            <StockBasicInfo title='52주 최고' value={String(props.currency)+String(props.yearlyHighestValue)}></StockBasicInfo>
+            <StockBasicInfo title='52주 최저' value={String(props.currency)+String(props.yearlyLowestValue)}></StockBasicInfo>
+            <StockBasicInfo title='PER' value={props.per}></StockBasicInfo>
         </div>
     )
 }
@@ -101,29 +107,6 @@ function StockBasicInfo(props) {
         <div className='stock-basic-info-container'>
             <span className='stock-basic-info-title'>{props.title}</span>
             <h3 className='stock-basic-info-value'>{props.value}</h3>
-        </div>
-    )
-}
-
-function StockPriceMinMax(props) {
-    return (
-        <div className='stock-price-min-max-container'>
-            <div className='stock-price-min-container'>
-                <span className='stock-price-min-title'>
-                    52주 최저
-                </span>
-                <h2 className='stock-price-min'>
-                    {props.minimumPrice}
-                </h2>
-            </div>
-            <div className='stock-price-max-container'>
-                <span className='stock-price-max-title'>
-                    52주 최고
-                </span>
-                <h2 className='stock-price-max'>
-                    {props.maximumPrice}
-                </h2>
-            </div>
         </div>
     )
 }

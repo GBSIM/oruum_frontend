@@ -17,7 +17,13 @@ const initialState = {
     plotPeriod: '1년',
     lastDailyChange: 31.91,
     lastDailyChangePercentage: 4.52,
+    yearlyHighestPrice: 1243.49,
+    yearlyLowestPrice: 620.46,
+
     plotPeriod: '1년',
+
+    //Financial ratio
+    per: 99.61,
 };
 
 export async function getCurrentPrice(tickerInput) {

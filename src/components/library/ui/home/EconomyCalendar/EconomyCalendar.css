@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.economy-event-container:hover {
+    background: #FBFBFB;
+}
+
 .economy-event-image {
     width: 40px;
     height: 40px;
