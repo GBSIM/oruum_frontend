@@ -1,10 +1,12 @@
 import './StockIncome.css';
 
 export default function StockIncome() {
+    const {koreaName} = useSelector(state => state.stock);
+    
     return (
         <div>
             <h3 className='stock-income-title'>
-                {'테슬라'}의 매출과 영업이익은 매년 성장 중!
+                {koreaName}의 매출과 영업이익은 매년 성장 중!
             </h3>
             <div style={{height:'30px'}}></div>
             <div className="stock-income-container">
