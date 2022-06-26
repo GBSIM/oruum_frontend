@@ -4,14 +4,14 @@ import { useSelector,useDispatch } from "react-redux";
 import { changeDetailMenu } from '../../../../../_reducers/stock';
 
 export default function StockDetail() {
-    const {koreaName} = useSelector(state => state.stock);
+    const {koreanName} = useSelector(state => state.stock);
 
     return (
         <div>
             <div className="stock-detail-title-container">
                 <img className="stock-detail-title-icon"
                      src={require('../../images/Icon/icon_box_oruum_green.png')}></img>
-                <h2 className='stock-detail-title'>{koreaName}의 모든 것</h2>
+                <h2 className='stock-detail-title'>{koreanName}의 모든 것</h2>
             </div>
             <div style={{height:'20px'}}></div>
             <StockDetailSelector></StockDetailSelector>

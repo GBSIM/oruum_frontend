@@ -1,14 +1,17 @@
 import './StockCheckPoint.css';
+import { useSelector,useDispatch } from "react-redux";
 
 export default function StockCheckPoint() {
+    const {koreanName} = useSelector(state => state.stock);
+
     return (
         <div>
             <div className="stock-check-point-title-container">
-                <h2 className="stock-check-point-title">{'테슬라'}, 사야할까말아야할까?</h2>
+                <h2 className="stock-check-point-title">{koreanName}, 사야할까 말아야할까?</h2>
             </div>
             <div style={{height:'30px'}}></div>
             <CheckPoints
-                title={'테슬라, 매수하자!'}
+                title={koreanName + ', 매수하자!'}
                 titleImage={require('../../images/Icon/icon_add_light_black.png')}
                 textImage={require('../../images/Icon/icon_check_box_oruum_green.png')}
                 checkPoints={['전세계 자동차 제조사들보다 훨씬 높은 수익성!',
@@ -16,7 +19,7 @@ export default function StockCheckPoint() {
                               '전기차뿐만 아니라 스페이스X, 스타링크, 휴머노이드 로봇 등 시너지를 일으킬 수 있는 다양한 사업']}></CheckPoints>
             <div style={{height:'30px'}}></div>
             <CheckPoints
-                title={'테슬라, 좀 더 생각해봐야...?!'}
+                title={koreanName + ', 좀 더 생각해봐야...?!'}
                 titleImage={require('../../images/Icon/icon_minus_light_black.png')}
                 textImage={require('../../images/Icon/icon_danger_yellow.png')}
                 checkPoints={['과도하게 높은 이익 대비 주가',
