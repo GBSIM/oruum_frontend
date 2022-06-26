@@ -32,10 +32,12 @@
 
 .trading-history-price {
     color: #696969;
+    font-weight: 500;
 }
 
 .trading-history-share {
     color: #34B199;
+    font-weight: 500;
 }
 
 @media (max-height: 1500px) {

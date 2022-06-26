@@ -47,10 +47,10 @@ export default function PersonalTrading() {
                     <div style={{height:'10px'}}></div>
                     <div className='personal-trading-calendar-container'>
                         <Calendar dayList={['','','','1','2','3','4',
-                          '5','6','7','8','9','10','11',
-                          '12','13','14','15','16','17','18',
-                          '19','20','21','22','23','24','25',
-                          '26','27','28','29','30','','']}></Calendar>
+                                            '5','6','7','8','9','10','11',
+                                            '12','13','14','15','16','17','18',
+                                            '19','20','21','22','23','24','25',
+                                            '26','27','28','29','30','','']}></Calendar>
                     </div>
                     <div>
                         <TradingHistory date='2022-06-01' price={'$810.21'} share={'1'} trading={'매수'}></TradingHistory>
