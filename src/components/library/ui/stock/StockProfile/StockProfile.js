@@ -12,10 +12,16 @@ export default function StockProfile() {
            fallingPrice,fallingPricePercentage} = useSelector(state => state.stock);
 
     let lastDailyChangeString;
+    let dailyPriceInfo;
+    let lastDailyChangePercentageString;
     if (lastDailyChange >= 0) {
         lastDailyChangeString = '+' + String(lastDailyChange);
+        lastDailyChangePercentageString = Math.abs(lastDailyChangePercentage);
+        dailyPriceInfo = <h3 className="stock-profile-daily-change positive">{lastDailyChangeString} ({lastDailyChangePercentageString}%)</h3>
     } else {
         lastDailyChangeString = String(lastDailyChange);
+        lastDailyChangePercentageString = Math.abs(lastDailyChangePercentage);
+        dailyPriceInfo = <h3 className="stock-profile-daily-change negative">{lastDailyChangeString} ({lastDailyChangePercentageString}%)</h3>
     }
 
     return (
@@ -36,7 +42,7 @@ export default function StockProfile() {
                 <h1 className="stock-profile-current-price">{currency}{currentPrice}</h1>
             </div>
             <div className="stock-profile-row-container">
-                <h3 className="stock-profile-daily-change">{lastDailyChangeString} ({lastDailyChangePercentage}%)</h3>
+               {dailyPriceInfo}
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">

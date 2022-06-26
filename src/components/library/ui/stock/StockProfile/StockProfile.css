@@ -32,6 +32,14 @@
     margin: 0;
 }
 
+.stock-profile-daily-change.positivie {
+    color: #34B199;
+}
+
+.stock-profile-daily-change.negative {
+    color: #F15E5E;
+}
+
 .period-button {
     padding: 5px 20px 5px 20px;
     border-radius: 10px;

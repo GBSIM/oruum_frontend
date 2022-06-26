@@ -1,5 +1,7 @@
 import './StockDetail.css';
 import StockIncome from '../StockIncome/StockIncome';
+import { useSelector,useDispatch } from "react-redux";
+import { changeDetailMenu } from '../../../../../_reducers/stock';
 
 export default function StockDetail() {
     return (
@@ -21,19 +23,46 @@ export default function StockDetail() {
 }
 
 function StockDetailSelector() {
+    const {detailStockMenu} = useSelector(state => state.stock);
+    const dispatch = useDispatch();
+    const changeDetailMenuToDividend = () => {
+        dispatch(changeDetailMenu('배당금'));
+    }
+    const changeDetailMenuToProducts = () => {
+        dispatch(changeDetailMenu('제품군'));
+    }
+    const changeDetailMenuToIncome = () => {
+        dispatch(changeDetailMenu('매출과 영업이익'));
+    }
+    const changeDetailMenuToNews = () => {
+        dispatch(changeDetailMenu('뉴스'));
+    }
+    const changeDetailMenuToExpert = () => {
+        dispatch(changeDetailMenu('전문가 의견'));
+    }
+    const changeDetailMenuToTargetPrice = () => {
+        dispatch(changeDetailMenu('목표주가'));
+    }
+
     return (
         <div className='stock-detail-selector'>
-            <StockDetailSelectButton isOn={false} text='배당금'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='배당금'} text='배당금' 
+                                     onClickEvent={changeDetailMenuToDividend}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={false} text='제품군'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='제품군'} text='제품군' 
+                                     onClickEvent={changeDetailMenuToProducts}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={true} text='매출과 영업이익'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='매출과 영업이익'} text='매출과 영업이익' 
+                                     onClickEvent={changeDetailMenuToIncome}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={false} text='뉴스'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='뉴스'} text='뉴스' 
+                                     onClickEvent={changeDetailMenuToNews}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={false} text='전문가 의견'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='전문가 의견'} text='전문가 의견' 
+                                     onClickEvent={changeDetailMenuToExpert}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={false} text='목표주가'></StockDetailSelectButton>
+            <StockDetailSelectButton isOn={detailStockMenu==='목표주가'} text='목표주가'
+                                     onClickEvent={changeDetailMenuToTargetPrice}></StockDetailSelectButton>
         </div>
     )
 }
@@ -41,13 +70,13 @@ function StockDetailSelector() {
 function StockDetailSelectButton(props) {
     if (props.isOn) {
         return (
-            <button className='stock-detail-select-button on'>
+            <button className='stock-detail-select-button on' onClick={props.onClickEvent}>
                 {props.text}
             </button>
         )
     } else {
         return (
-            <button className='stock-detail-select-button off'>
+            <button className='stock-detail-select-button off' onClick={props.onClickEvent}>
                 {props.text}
             </button>
         )

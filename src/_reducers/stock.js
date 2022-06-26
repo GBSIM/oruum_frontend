@@ -2,8 +2,7 @@ import axios from "axios";
 
 export const GET_CURRENT_PRICE = "STOCK/GET_CURRENT_PRICE";
 export const CHANGE_PLOT_PERIOD = "STOCK/CHANGE_PLOT_PERIOD";
-
-export const changePricePlotPeriod = (period) => ({ type: CHANGE_PLOT_PERIOD, period });
+export const CHANGE_DETAIL_MENU = "STOCK/CHANGE_DETAIL_MENU";
 
 const initialState = {
     // Stock profile
@@ -28,7 +27,13 @@ const initialState = {
 
     //Financial ratio
     per: 99.61,
+
+    //Stock detail menu
+    detailStockMenu: '매출과 영업이익',
 };
+
+export const changePricePlotPeriod = (period) => ({ type: CHANGE_PLOT_PERIOD, period });
+export const changeDetailMenu = (menu) => ({type: CHANGE_DETAIL_MENU, menu});
 
 export async function getCurrentPrice(tickerInput) {
   const request = await axios.get('http://3.38.30.153/api/stockpricehistory/'+tickerInput)
@@ -55,6 +60,11 @@ const stock = (state = initialState, action) => {
       return {
         ...state,
         plotPeriod: action.period,
+      }
+    case CHANGE_DETAIL_MENU:
+      return {
+        ...state,
+        detailStockMenu: action.menu,
       }
     default:
       return state;
