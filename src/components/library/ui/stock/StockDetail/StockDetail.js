@@ -7,7 +7,7 @@ export default function StockDetail() {
             <div className="stock-detail-title-container">
                 <img className="stock-detail-title-icon"
                      src={require('../../images/Icon/icon_box_oruum_green.png')}></img>
-                <h2 className='stock-detail-title'>애플의 모든 것</h2>
+                <h2 className='stock-detail-title'>테슬라의 모든 것</h2>
             </div>
             <div style={{height:'20px'}}></div>
             <StockDetailSelector></StockDetailSelector>

@@ -4,7 +4,7 @@ export default function StockIncome() {
     return (
         <div>
             <h3 className='stock-income-title'>
-                {'애플'}의 매출과 영업이익은 매년 성장 중!
+                {'테슬라'}의 매출과 영업이익은 매년 성장 중!
             </h3>
             <div style={{height:'30px'}}></div>
             <div className="stock-income-container">

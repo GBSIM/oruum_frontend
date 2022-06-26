@@ -52,7 +52,7 @@ export default function PersonalTrading() {
                     </div>
                     <div>
                         <TradingHistory date='2022-06-01' price={'$810.21'} share={'1'} trading={'매수'}></TradingHistory>
-                        <TradingHistory date='2022-06-04' price={'$750.5i'} share={'3'} trading={'매수'}></TradingHistory>
+                        <TradingHistory date='2022-06-04' price={'$750.55'} share={'3'} trading={'매수'}></TradingHistory>
                         <TradingHistory date='2022-06-05' price={'$780.29'} share={'2'} trading={'매수'}></TradingHistory>
                     </div>
                 </div>
