@@ -1,4 +1,5 @@
 import './StockIncome.css';
+import { useSelector,useDispatch } from "react-redux";
 
 export default function StockIncome() {
     const {koreaName} = useSelector(state => state.stock);
