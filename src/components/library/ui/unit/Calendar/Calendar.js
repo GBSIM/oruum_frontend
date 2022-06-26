@@ -4,7 +4,7 @@ export default function Calendar(props) {
     const CalndarDayList = props.dayList.map((day,index) => (
         <div className='calendar-day'>
             <button className='calendar-day-button'>
-                <span style={{background:'rgba(0,0,0,0)'}}>{day}</span>
+                <span className='calendar-day-text'>{day}</span>
             </button>
         </div>
     ))
