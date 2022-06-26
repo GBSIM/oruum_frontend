@@ -15,11 +15,11 @@ export default function StockProfile() {
     let dailyPriceInfo;
     let lastDailyChangePercentageString;
     if (lastDailyChange >= 0) {
-        lastDailyChangeString = '+' + String(lastDailyChange);
+        lastDailyChangeString = '+' + currency + String(lastDailyChange);
         lastDailyChangePercentageString = Math.abs(lastDailyChangePercentage);
         dailyPriceInfo = <h3 className="stock-profile-daily-change positive">{lastDailyChangeString} ({lastDailyChangePercentageString}%)</h3>
     } else {
-        lastDailyChangeString = String(lastDailyChange);
+        lastDailyChangeString = currency + String(lastDailyChange);
         lastDailyChangePercentageString = Math.abs(lastDailyChangePercentage);
         dailyPriceInfo = <h3 className="stock-profile-daily-change negative">{lastDailyChangeString} ({lastDailyChangePercentageString}%)</h3>
     }
