@@ -1,6 +1,7 @@
 import './StockProfile.css';
 import LineGraph from '../../unit/LineGraph/LineGraph';
 import { useSelector,useDispatch } from "react-redux";
+import { changePricePlotPeriod } from '../../../../../_reducers/stock';
 
 export default function StockProfile() {
     const {ticker,koreanName,englishName,
@@ -65,13 +66,31 @@ export default function StockProfile() {
 }
 
 function PeriodSelector () {
+    const {plotPeriod} = useSelector(state => state.stock);
+    const dispatch = useDispatch();
+    const changeTo1Week = () => {
+        dispatch(changePricePlotPeriod('1주'));
+    }
+    const changeTo1Month = () => {
+        dispatch(changePricePlotPeriod('1달'));
+    }
+    const changeTo6Months = () => {
+        dispatch(changePricePlotPeriod('6달'));
+    }
+    const changeTo1Year = () => {
+        dispatch(changePricePlotPeriod('1년'));
+    }
+    const changeTo5Years = () => {
+        dispatch(changePricePlotPeriod('5년'));
+    }
+
     return (
         <div className='period-button-container'>
-            <PeriodButton isOn={false} periodName={'1주'}></PeriodButton>
-            <PeriodButton isOn={false} periodName={'1달'}></PeriodButton>
-            <PeriodButton isOn={true} periodName={'6달'}></PeriodButton>
-            <PeriodButton isOn={false} periodName={'1년'}></PeriodButton>
-            <PeriodButton isOn={false} periodName={'5년'}></PeriodButton>
+            <PeriodButton isOn={plotPeriod==='1주'} periodName={'1주'} onClickEvent={changeTo1Week}></PeriodButton>
+            <PeriodButton isOn={plotPeriod==='1달'} periodName={'1달'} onClickEvent={changeTo1Month}></PeriodButton>
+            <PeriodButton isOn={plotPeriod==='6달'} periodName={'6달'} onClickEvent={changeTo6Months}></PeriodButton>
+            <PeriodButton isOn={plotPeriod==='1년'} periodName={'1년'} onClickEvent={changeTo1Year}></PeriodButton>
+            <PeriodButton isOn={plotPeriod==='5년'} periodName={'5년'} onClickEvent={changeTo5Years}></PeriodButton>
         </div>
     )
 }
@@ -79,13 +98,13 @@ function PeriodSelector () {
 function PeriodButton(props) {
     if (props.isOn) {
         return (
-            <button className='period-button on'>
+            <button className='period-button on' >
                 {props.periodName}
             </button>
         )
     } else {
         return (
-            <button className='period-button off'>
+            <button className='period-button off' onClick={props.onClickEvent}>
                 {props.periodName}
             </button>
         )
