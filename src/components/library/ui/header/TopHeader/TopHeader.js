@@ -21,6 +21,9 @@ export default function TopHeader(props) {
                 <button className='top-header-circle-button'>
                     <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_more_dark_grey.png')}></img>
                 </button>
+                <button className='top-header-login-button'>
+                    로그인
+                </button>
                 <div style={{minWidth:'20px'}}></div>
             </div>            
         </div>
