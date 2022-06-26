@@ -11,6 +11,8 @@
     height: 20px;
     min-width: 20px;
     max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
     background: #DCDCDC;
     display: flex;
     flex-direction: row;
@@ -28,6 +30,8 @@
     height: 14px;
     min-width: 14px;
     max-width: 14px;
+    min-height: 14px;
+    max-height: 14px;
     background-color: rgba(0,0,0,0);
 }
 
@@ -83,23 +87,5 @@
     }
     .calendar-day-text {
         font-size: 12px;
-    }
-    .calendar-month-change-button {
-        width:16px;
-        height: 16px;
-        min-width: 16px;
-        max-width: 16px;
-        min-height: 16px;
-        max-height: 16px;
-        flex-shrink: 0;
-    }
-    .calendar-month-change-button-image {
-        width: 12px;
-        height: 12px;
-        min-width: 12px;
-        max-width: 12px;
-        min-height: 12px;
-        max-height: 12px;
-        flex-shrink: 0;
     }
 }
