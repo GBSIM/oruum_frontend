@@ -8,8 +8,8 @@ export default function LineGraph(props) {
     const maximumData = Math.max(...props.ydata);
     const minimumData = Math.min(...props.ydata);
     
-    const plotMaximumValue = maximumData + (maximumData - minimumData) * 0.25;
-    const plotMinimumValue = minimumData - + (maximumData - minimumData) * 0.25;
+    const plotMaximumValue = maximumData + (maximumData - minimumData) * 0.05;
+    const plotMinimumValue = minimumData - (maximumData - minimumData) * 0.3;
 
     return (
         <div className='line-graph-container'>
