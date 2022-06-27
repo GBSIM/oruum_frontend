@@ -6,8 +6,6 @@ import { tuple } from 'antd/lib/_util/type';
 Chart.register(...registerables);
 
 export default function LineGraph(props) {
-
-
     return (
         <div className='line-graph-container'>
             <div className='line-chart-canvas'>
@@ -29,11 +27,16 @@ export default function LineGraph(props) {
                         }}
                     options={{
                         maintainAspectRatio: false,
+                        responsiveAnimationDuration: 500,
                         responsive: true,
                         spanGaps: true,
                         mouseLine: {
                             color: "#32d296"
                         },
+                        interaction: {
+                            mode: "index",
+                            intersect: false,
+                        },              
                         tooltips: {
                             enabled: true,
                             intersect: false,
