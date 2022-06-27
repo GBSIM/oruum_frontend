@@ -48,10 +48,7 @@ export default function StockProfile() {
             <div className="stock-profile-row-container">
                 <PeriodSelector></PeriodSelector>
             </div>
-            <div className="stock-profile-row-container" 
-                onMouseOver={disableScroll}
-                onMouseLeave={enableScroll}
-                >
+            <div className="stock-profile-row-container">
                 <LineGraph
                     xdata={dateArray}
                     ydata={closePriceArray}></LineGraph>
@@ -164,14 +161,12 @@ var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 function preventDefault(e) {
   e.preventDefault();
 }
-
 function preventDefaultForScrollKeys(e) {
   if (keys[e.keyCode]) {
     preventDefault(e);
     return false;
   }
 }
-
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
