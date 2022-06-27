@@ -2,10 +2,15 @@ import './LineGraph.css';
 
 import { Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
-import { tuple } from 'antd/lib/_util/type';
 Chart.register(...registerables);
 
 export default function LineGraph(props) {
+    const maximumData = Math.max(...props.ydata);
+    const minimumData = Math.min(...props.ydata);
+    
+    const plotMaximumValue = maximumData + (maximumData - minimumData) * 0.15;
+    const plotMinimumValue = minimumData - + (maximumData - minimumData) * 0.15;
+
     return (
         <div className='line-graph-container'>
             <div className='line-chart-canvas'>
@@ -62,6 +67,8 @@ export default function LineGraph(props) {
                             },
                             yAxis: {
                                 display: false,
+                                max: plotMaximumValue,
+                                min: plotMinimumValue,
                             },
                             x: {
                                 display: false,
