@@ -2,6 +2,7 @@ import './LineGraph.css';
 
 import { Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
+import { tuple } from 'antd/lib/_util/type';
 Chart.register(...registerables);
 
 export default function LineGraph(props) {
@@ -27,8 +28,21 @@ export default function LineGraph(props) {
                         ]
                         }}
                     options={{
-                        // responsive: false,
                         maintainAspectRatio: false,
+                        responsive: true,
+                        spanGaps: true,
+                        mouseLine: {
+                            color: "#32d296"
+                        },
+                        tooltips: {
+                            enabled: true,
+                            intersect: false,
+                            mode: "index"
+                        },
+                        hover: {
+                            mode: 'index',
+                            intersect: false,
+                        },
                         plugins: {
                             legend: {
                             position: 'top',
@@ -39,10 +53,6 @@ export default function LineGraph(props) {
                             text: 'Stock price',
                             },
                         },
-                        tooltips: {
-                            mode: 'x',
-                            intersect: false
-                          },
                         scales: {
                             xAxis: {
                                 display: false,
@@ -52,23 +62,10 @@ export default function LineGraph(props) {
                             },
                             x: {
                                 display: false,
-                                ticks: {
-                                    maxRotation: 0,
-                                    minRotation: 0,
-                                    font: {
-                                        size: 14,
-                                        family: 'Noto Sans KR',
-                                        weight: 500,
-                                    },
-                                    align: 'start',
-                                    // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-                                    callback: function(val, index) {
-                                        return index%20 === 0? this.getLabelForValue(index): "";
-                                    },
-                                },
                             },
-                        }}}
-                    />
+                        }
+                    }}
+                />
             </div>
         </div>
     )
