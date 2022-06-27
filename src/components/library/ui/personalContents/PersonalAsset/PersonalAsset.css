@@ -34,9 +34,20 @@
     column-gap: 10px;
 }
 
+.personal-asset-row-container.portfolio-stock-price {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
 @media (max-width:1500px) {
     .personal-asset-profile-image {
         width: 90px;
         height: 90px;
+    }
+}
+
+@media (max-height: 820px) {
+    .personal-asset-row-container.portfolio-stock-price {
+        display: none;
     }
 }

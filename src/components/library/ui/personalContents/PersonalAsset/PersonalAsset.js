@@ -1,6 +1,11 @@
 import './PersonalAsset.css';
+import MiniPriceRow from '../../unit/MiniPriceRow/MiniPriceRow';
+import { useSelector,useDispatch } from "react-redux";
+
 
 export default function PersonalAsset() {
+    const {currency} = useSelector(state => state.stock);
+
     return (
         <div>
             <div style={{height:'15px'}}></div>
@@ -37,7 +42,34 @@ export default function PersonalAsset() {
                     <StockHolderBar
                         image={require('../../images/StockLogo/logo_ko.png')}></StockHolderBar>
                 </div>
-                
+            </div>
+            <div style={{height:'30px'}}></div>
+            <div className='personal-asset-row-container portfolio-stock-price'>
+                <MiniPriceRow
+                    image={require('../../images/StockLogo/logo_aapl.png')}
+                    koreanName='애플'
+                    price={114.62}
+                    dailyChange={1.82}
+                    currency={currency}
+                    dailyChangePercentage={1.53}></MiniPriceRow>
+            </div>
+            <div className='personal-asset-row-container portfolio-stock-price'>
+                <MiniPriceRow
+                    image={require('../../images/StockLogo/logo_tsla.png')}
+                    koreanName='테슬라'
+                    price={737.12}
+                    dailyChange={31.91}
+                    currency={currency}
+                    dailyChangePercentage={4.52}></MiniPriceRow>
+            </div>
+            <div className='personal-asset-row-container portfolio-stock-price'>
+                <MiniPriceRow
+                    image={require('../../images/StockLogo/logo_nvda.png')}
+                    koreanName='엔비디아'
+                    price={171.26}
+                    dailyChange={9.01}
+                    currency={currency}
+                    dailyChangePercentage={5.55}></MiniPriceRow>
             </div>
         </div>
     )

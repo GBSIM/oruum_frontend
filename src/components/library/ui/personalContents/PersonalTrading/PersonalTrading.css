@@ -12,7 +12,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-left: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .trading-history-container {
@@ -23,7 +24,7 @@
     justify-content: space-around;
     column-gap: 40px;
     border-bottom: 1px solid #DCDCDC;
-    padding: 7px 5px 7px 5px;
+    padding: 7px 0px 7px 0px;
 }
 
 .trading-history-date {
