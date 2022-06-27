@@ -2,7 +2,14 @@ import './StockIncome.css';
 import { useSelector,useDispatch } from "react-redux";
 
 export default function StockIncome() {
-    const {koreanName} = useSelector(state => state.stock);
+    const {koreanName, currency} = useSelector(state => state.stock);
+
+    let unitInformation;
+    if (currency === '$') {
+        unitInformation = <span style={{color: '#B9B9B9',fontSize:'14px'}}>단위는 달러이며, B는 billion (1,000,000,000), M은 million (1,000,000) K는 kilo (1,000)을 의미해요.</span>
+    } else {
+        unitInformation = <span style={{color: '#B9B9B9',fontSize:'14px'}}></span>
+    }
     
     return (
         <div>
@@ -92,6 +99,8 @@ export default function StockIncome() {
                     <span className='stock-income-value'>{'50B'}</span>
                 </div>
             </div>
+            <div style={{height:'30px'}}></div>
+            {unitInformation}
         </div>
     )
 }
