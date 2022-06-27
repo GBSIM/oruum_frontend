@@ -32,7 +32,7 @@ export default function LineGraph(props) {
                         }}
                     options={{
                         maintainAspectRatio: false,
-                        responsiveAnimationDuration: 500,
+                        responsiveAnimationDuration: 100,
                         responsive: true,
                         spanGaps: true,
                         mouseLine: {
