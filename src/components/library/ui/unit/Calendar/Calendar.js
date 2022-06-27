@@ -2,7 +2,7 @@ import './Calendar.css';
 
 export default function Calendar(props) {
     const CalndarDayList = props.dayList.map((day,index) => (
-        <div className='calendar-day'>
+        <div className='calendar-day' key={index}>
             <button className='calendar-day-button'>
                 <span className='calendar-day-text'>{day}</span>
             </button>

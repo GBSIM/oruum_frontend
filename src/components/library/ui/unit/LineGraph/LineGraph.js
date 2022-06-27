@@ -5,10 +5,13 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 export default function LineGraph(props) {
+
+
     return (
         <div className='line-graph-container'>
             <div className='line-chart-canvas'>
                 <Line
+                    id='line_graph'
                     className='line-chart'
                     width="100vw"
                     data={{
@@ -36,6 +39,10 @@ export default function LineGraph(props) {
                             text: 'Stock price',
                             },
                         },
+                        tooltips: {
+                            mode: 'x',
+                            intersect: false
+                          },
                         scales: {
                             xAxis: {
                                 display: false,

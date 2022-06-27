@@ -34,7 +34,8 @@ function CheckPoints(props) {
     const CheckPointList = props.checkPoints.map((checkPoint,index) => (
         <CheckPoint
             image={props.textImage}
-            text={checkPoint}></CheckPoint>
+            text={checkPoint}
+            key={index}></CheckPoint>
     ))
 
     return (
