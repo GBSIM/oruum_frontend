@@ -12,7 +12,7 @@ export default function LineGraph(props) {
     const plotMinimumValue = minimumData - (maximumData - minimumData) * 0.3;
 
     return (
-        <div className='line-graph-container'>
+        <div className='line-graph-container' id = 'lineGraph'>
             <div className='line-chart-canvas'>
                 <Line
                     id='line_graph'
