@@ -25,12 +25,16 @@
 
 .calendar-activated-date {
     background: #F15E5E;
-    width: 28px;
-    min-width: 28px;
-    height: 28px;
-    min-height: 28px;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
     border-radius: 15px;
     color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .calendar-month-change-button:hover {
@@ -70,7 +74,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 4px;
+    padding-top: 6px;
     color: #696969;
 }
 
@@ -99,5 +103,12 @@
     }
     .calendar-day-text {
         font-size: 12px;
+    }
+    .calendar-activated-date {
+        font-size: 12px;
+        width: 28px;
+        min-width: 28px;
+        height: 28px;
+        min-height: 28px;
     }
 }
