@@ -1,7 +1,7 @@
 .calendar-month-row-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
     min-height: 30px;
@@ -20,6 +20,17 @@
     align-items: center;
     justify-content: center;
     border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.calendar-activated-date {
+    background: #F15E5E;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    min-height: 28px;
+    border-radius: 15px;
+    color: #fff;
 }
 
 .calendar-month-change-button:hover {
