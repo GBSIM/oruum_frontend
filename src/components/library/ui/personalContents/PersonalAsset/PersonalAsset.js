@@ -5,6 +5,15 @@ import { useSelector,useDispatch } from "react-redux";
 
 export default function PersonalAsset() {
     const {currency} = useSelector(state => state.stock);
+    const {name,assetCurrency,totalAsset,
+           dailyAssetChange,dailyAssetChangePercentage} = useSelector(state => state.user);
+        
+    let dailyAssetChangeString;
+    if (dailyAssetChange >= 0) {
+        dailyAssetChangeString = '+' + dailyAssetChange.toLocaleString();
+    } else {
+        dailyAssetChangeString = dailyAssetChange.toLocaleString();
+    }
 
     return (
         <div>
@@ -16,17 +25,17 @@ export default function PersonalAsset() {
             </div>
             <div style={{height:'5px'}}></div>
             <div className='personal-asset-row-container'>
-                <h3 style={{margin:0,color:'#696969'}}>지원</h3>  
+                <h3 style={{margin:0,color:'#696969'}}>{name}</h3>  
             </div>
             <div style={{height:'5px'}}></div>
             <div className='personal-asset-row-container'>
                 <span style={{margin:0,color:'#696969'}}>총 자산</span>  
             </div>
             <div className='personal-asset-row-container'>
-                <h2 style={{margin:0,color:'#333333'}}>￦541,571,580</h2>
+                <h2 style={{margin:0,color:'#333333'}}>{assetCurrency}{totalAsset.toLocaleString()}</h2>
             </div>
             <div className='personal-asset-row-container'>
-                <span style={{margin:0,fontWeight:'500',color:'#34B199'}}>+3,015,152 (+1.51%)</span>
+                <span style={{margin:0,fontWeight:'500',color:'#34B199'}}>{dailyAssetChangeString} ({dailyAssetChangePercentage}%)</span>
             </div>
             <div style={{height:'15px'}}></div>
             <div className='personal-asset-row-container'>
