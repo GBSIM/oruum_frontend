@@ -49,7 +49,7 @@ export default function Calendar(props) {
                 </button>
                 <div style={{width:'30px'}}></div>
                 <div style={{alignItems:'center'}}>
-                    <span style={{color: '#B9B9B9'}}>{year}</span>
+                    <span style={{color: '#B9B9B9',fontWeight:'500'}}>{year}</span>
                     <h3 className='calendar-month-text'>{month+1}월</h3>    
                 </div>
                 <div style={{width:'30px'}}></div>
