@@ -4,30 +4,30 @@ export default function StockProducts() {
     return (
         <div>
             <StockProduct
-                image={require('../../images/image/image_product_example.png')}
-                name='아이폰'
-                salesRatio={52.4}
-                yearlyGrowthPercentage={16.2}></StockProduct>
+                image={require('../../images/image/image_tesla_car.png')}
+                name='차량판매'
+                salesRatio={82.0}
+                yearlyGrowthPercentage={79}></StockProduct>
             <StockProduct
-                image={require('../../images/image/image_product_example.png')}
-                name='서비스'
-                salesRatio={52.4}
-                yearlyGrowthPercentage={16.2}></StockProduct>
+                image={require('../../images/image/image_service.png')}
+                name='서비스 및 기타'
+                salesRatio={7.0}
+                yearlyGrowthPercentage={65}></StockProduct>
             <StockProduct
-                image={require('../../images/image/image_product_example.png')}
-                name='웨어러블기기'
-                salesRatio={52.4}
-                yearlyGrowthPercentage={16.2}></StockProduct>
+                image={require('../../images/image/image_energy.png')}
+                name='에너지'
+                salesRatio={5.5}
+                yearlyGrowthPercentage={40}></StockProduct>
             <StockProduct
-                image={require('../../images/image/image_product_example.png')}
-                name='맥'
-                salesRatio={52.4}
-                yearlyGrowthPercentage={16.2}></StockProduct>
+                image={require('../../images/image/image_lease.png')}
+                name='차량리스'
+                salesRatio={3.1}
+                yearlyGrowthPercentage={56}></StockProduct>
             <StockProduct
-                image={require('../../images/image/image_product_example.png')}
-                name='아이패드'
-                salesRatio={52.4}
-                yearlyGrowthPercentage={16.2}></StockProduct>
+                image={require('../../images/image/image_credit.png')}
+                name='전기차 크레딧'
+                salesRatio={2.7}
+                yearlyGrowthPercentage={-7}></StockProduct>
         </div>
     )
 }

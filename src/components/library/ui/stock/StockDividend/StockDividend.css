@@ -1,7 +1,11 @@
 .stock-dividend-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+}
+
+.stock-dividend-text {
+    color: #696969;
 }
 
 .stock-dividend-bar-graph-container {
