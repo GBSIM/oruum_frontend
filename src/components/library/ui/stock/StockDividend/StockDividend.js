@@ -17,7 +17,7 @@ export default function StockDividend() {
                 <div className='stock-dividend-highlight'>
                     <span style={{fontSize:'14px',color:'#696969',fontWeight:'500'}}>최근 배당금</span>
                     <h2 style={{color:'#34B199'}}>$0.22</h2>
-                    <div style={{height:'20px'}}></div>
+                    <div style={{height:'15px'}}></div>
                     <span style={{fontSize:'14px',color:'#696969',fontWeight:'500'}}>배당률</span>
                     <h2 style={{color:'#34B199'}}>0.67%</h2>
                 </div>

@@ -33,7 +33,8 @@ function News(props) {
             <img src={props.image} className='news-image'></img>
             <div style={{width:'15px'}}></div>
             <div className="news-text-container">
-                <h3 className="news-title">{props.title}</h3>
+                <span className="news-title">{props.title}</span>
+                <div style={{height:'5px'}}></div>
                 <div className="news-sub-text-container">
                     <span className="news-sub-text">{props.journal}</span>
                     <div className="news-sub-text-divider"></div>

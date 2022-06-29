@@ -29,6 +29,7 @@
 .news-title {
     margin: 0;
     color: #333;
+    font-weight: 500;
     background: rgba(0,0,0,0);
 }
 
@@ -43,6 +44,7 @@
 .news-sub-text {
     color: #696969;
     background: rgba(0,0,0,0);
+    font-size: 12px;
 }
 
 .news-sub-text-divider {
