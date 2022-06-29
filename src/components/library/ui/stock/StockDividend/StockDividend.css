@@ -1,0 +1,43 @@
+.stock-dividend-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stock-dividend-bar-graph-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+    padding-left: 20px;
+}
+
+.stock-dividend-period-text {
+    font-size: 14px;
+    color: #696969;
+}
+
+.stock-dividend-highlight {
+    padding-left: 50px;
+}
+
+.stock-dividend-bar {
+    width: 30px;
+    border-radius: 3px;
+    background: #DCDCDC;
+}
+
+@media (max-width:600px) {
+    .stock-dividend-period-text {
+        font-size: 12px;
+    }
+    .stock-dividend-bar {
+        width: 25px;
+    }
+    .stock-dividend-bar-graph-container {
+        column-gap: 10px;
+    }
+    .stock-dividend-highlight {
+        padding-left: 30px;
+    }
+}

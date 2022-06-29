@@ -13,8 +13,6 @@ export default function Calendar(props) {
 
     const [daySpanList, dayList] = getDayList(year,month,activatedDate);
 
-    console.log(dayList);
-
     const increaseMonth = () => {
         if (month === 11) {
             setMonth(0);

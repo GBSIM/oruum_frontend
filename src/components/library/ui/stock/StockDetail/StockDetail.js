@@ -1,10 +1,25 @@
 import './StockDetail.css';
 import StockIncome from '../StockIncome/StockIncome';
+import StockDividend from '../StockDividend/StockDividend';
+import StockProducts from '../StockProducts/StockProducts';
 import { useSelector,useDispatch } from "react-redux";
 import { changeDetailMenu } from '../../../../../_reducers/stock';
 
 export default function StockDetail() {
-    const {koreanName} = useSelector(state => state.stock);
+    const {koreanName,detailStockMenu} = useSelector(state => state.stock);
+
+    console.log(detailStockMenu);
+
+    let detailContents;
+    if (detailStockMenu === '배당금') {
+        detailContents = <StockDividend></StockDividend>
+    } else if (detailStockMenu === '매출과 영업이익') {
+        detailContents = <StockIncome></StockIncome>
+    } else if (detailStockMenu === '제품군') {
+        detailContents = <StockProducts></StockProducts>
+    } else {
+        detailContents = <StockIncome></StockIncome>
+    }
 
     return (
         <div>
@@ -17,7 +32,7 @@ export default function StockDetail() {
             <StockDetailSelector></StockDetailSelector>
             <div>
                 <div style={{height:'15px'}}></div>
-                <StockIncome></StockIncome>
+                {detailContents}
             </div>
             <div style={{height:'30px'}}></div>
         </div>
