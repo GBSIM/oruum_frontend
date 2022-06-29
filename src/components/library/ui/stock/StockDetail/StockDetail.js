@@ -2,6 +2,7 @@ import './StockDetail.css';
 import StockIncome from '../StockIncome/StockIncome';
 import StockDividend from '../StockDividend/StockDividend';
 import StockProducts from '../StockProducts/StockProducts';
+import StockNews from '../StockNews/StockNews';
 import { useSelector,useDispatch } from "react-redux";
 import { changeDetailMenu } from '../../../../../_reducers/stock';
 
@@ -17,6 +18,8 @@ export default function StockDetail() {
         detailContents = <StockIncome></StockIncome>
     } else if (detailStockMenu === '제품군') {
         detailContents = <StockProducts></StockProducts>
+    } else if (detailStockMenu === '뉴스') {
+        detailContents = <StockNews></StockNews>
     } else {
         detailContents = <StockIncome></StockIncome>
     }
