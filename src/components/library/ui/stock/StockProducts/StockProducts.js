@@ -33,6 +33,12 @@ export default function StockProducts() {
 }
 
 function StockProduct(props) {
+    let growthPercentageText
+    if (props.yearlyGrowthPercentage >= 0) {
+        growthPercentageText = <span className="stock-product-information-value" style={{color: '#34B199'}}>{props.yearlyGrowthPercentage}%</span>
+    } else {
+        growthPercentageText = <span className="stock-product-information-value" style={{color: '#F15E5E'}}>{props.yearlyGrowthPercentage}%</span>
+    }
     return (
         <button className="stock-product-container">
             <img src={props.image} className='stock-product-image'></img>
@@ -52,7 +58,7 @@ function StockProduct(props) {
                     <div style={{width:'15px'}}></div>
                     <span className="stock-product-information-title">연성장률</span>
                     <div style={{width:'5px'}}></div>
-                    <span className="stock-product-information-value">{props.yearlyGrowthPercentage}%</span>
+                    {growthPercentageText}
                 </div>
             </div>
         </button>

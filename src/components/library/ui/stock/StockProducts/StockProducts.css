@@ -34,9 +34,11 @@
 .stock-product-information-title {
     color: #B9B9B9;
     background: rgba(0,0,0,0);
+    font-weight: 500;
 }
 
 .stock-product-information-value {
     color: #333;
     background: rgba(0,0,0,0);
+    font-weight: 500;
 }
