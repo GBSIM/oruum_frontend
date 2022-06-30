@@ -1,12 +1,15 @@
 export const CHANGE_MARKET_GAINER_COUNTRY = "HOME/CHANGE_MARKET_GAINER_COUNTRY";
 export const CHANGE_MARKET_LOSER_COUNTRY = "HOME/CHANGE_MARKET_LOSER_COUNTRY";
+export const CHANGE_EARNINGS_CALENDAR_COUNTRY = "HOME/CHANGE_EARNINGS_CALENDAR_COUNTRY";
 
 export const changeMarketGainerCountry = () => ({type:CHANGE_MARKET_GAINER_COUNTRY});
 export const changeMarketLoserCountry = () => ({type:CHANGE_MARKET_LOSER_COUNTRY});
+export const changeEarningCalendarCountry = () => ({type:CHANGE_EARNINGS_CALENDAR_COUNTRY});
 
 const initialState = {
     isMarketGainerKorea: true,
     isMarketLoserKorea: true,
+    isEarningsCalendarKorea: true,
     marketIndexList: [
       {"name":'코스피',"value":2332.64,"dailyChange":-45.35,"dailyChangePercentage":-1.91,"country":"kr"},
       {"name":'코스닥',"value":745.44,"dailyChange":16.91,"dailyChangePercentage":-2.22,"country":"kr"},
@@ -55,6 +58,11 @@ const initialState = {
         return {
           ...state,
           isMarketLoserKorea: !state.isMarketLoserKorea,
+        };
+      case CHANGE_EARNINGS_CALENDAR_COUNTRY:
+        return {
+          ...state,
+          isEarningsCalendarKorea: !state.isEarningsCalendarKorea,
         };
 
       default:

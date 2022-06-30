@@ -14,7 +14,7 @@ export default function StockDetail() {
         detailContents = <StockDividend></StockDividend>
     } else if (detailStockMenu === '매출과 영업이익') {
         detailContents = <StockIncome></StockIncome>
-    } else if (detailStockMenu === '제품군') {
+    } else if (detailStockMenu === '매출구성') {
         detailContents = <StockProducts></StockProducts>
     } else if (detailStockMenu === '뉴스') {
         detailContents = <StockNews></StockNews>
@@ -47,7 +47,7 @@ function StockDetailSelector() {
         dispatch(changeDetailMenu('배당금'));
     }
     const changeDetailMenuToProducts = () => {
-        dispatch(changeDetailMenu('제품군'));
+        dispatch(changeDetailMenu('매출구성'));
     }
     const changeDetailMenuToIncome = () => {
         dispatch(changeDetailMenu('매출과 영업이익'));
@@ -67,7 +67,7 @@ function StockDetailSelector() {
             <StockDetailSelectButton isOn={detailStockMenu==='배당금'} text='배당금' 
                                      onClickEvent={changeDetailMenuToDividend}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
-            <StockDetailSelectButton isOn={detailStockMenu==='제품군'} text='제품군' 
+            <StockDetailSelectButton isOn={detailStockMenu==='매출구성'} text='매출구성' 
                                      onClickEvent={changeDetailMenuToProducts}></StockDetailSelectButton>
             <div style={{minWidth:'10px'}}></div>
             <StockDetailSelectButton isOn={detailStockMenu==='매출과 영업이익'} text='매출과 영업이익' 
