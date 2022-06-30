@@ -1,0 +1,12 @@
+.economy-page-top-space {
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    .economy-page-top-space {
+        height: 0px;
+    }
+    .unit-box.economy-top {
+        border-top: none;
+    }
+}

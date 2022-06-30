@@ -10,7 +10,6 @@ import BottomNavMenuBar  from "../../library/ui/nav/BottomNavMenuBar/BottomNavMe
 import MarketSummary from "../../library/ui/home/MarketSummary/MarketSummary";
 import MarketGainer from "../../library/ui/home/MarketGainer/MarketGainer";
 import MarketLoser from "../../library/ui/home/MarketLoser/MarketLoser";
-import EconomyCalendar from "../../library/ui/home/EconomyCalendar/EconomyCalendar";
 
 export default function HomePage() {
     return (
@@ -31,9 +30,6 @@ export default function HomePage() {
                         <MarketLoser></MarketLoser>
                     </div>
                     <div style={{minHeight:'20px'}}></div>
-                    <div className="unit-box">
-                        <EconomyCalendar></EconomyCalendar>
-                    </div>
                 </div>
             </div>
             <BottomNavMenuBar></BottomNavMenuBar>
