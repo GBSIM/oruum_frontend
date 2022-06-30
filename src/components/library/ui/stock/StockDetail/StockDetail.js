@@ -9,8 +9,6 @@ import { changeDetailMenu } from '../../../../../_reducers/stock';
 export default function StockDetail() {
     const {koreanName,detailStockMenu} = useSelector(state => state.stock);
 
-    console.log(detailStockMenu);
-
     let detailContents;
     if (detailStockMenu === '배당금') {
         detailContents = <StockDividend></StockDividend>

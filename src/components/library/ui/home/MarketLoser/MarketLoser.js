@@ -1,44 +1,47 @@
 import PriceRow from "../../unit/PriceRow/PriceRow"
 import CountrySelector from "../../unit/CountrySelector/CountrySelector"
+import { useSelector,useDispatch } from "react-redux";
+import { changeMarketLoserCountry } from "../../../../../_reducers/home";
 
 export default function MarketLoser() {
+    const {marketLoserKoreaList,marketLoserUsList,isMarketLoserKorea} = useSelector(state => state.home);
+    const dispatch = useDispatch();
+    const marketLoserCountryClickEvent = () => {
+        dispatch(changeMarketLoserCountry());
+    }
+
+    let marketLoserList;
+    if (isMarketLoserKorea) {
+        marketLoserList = marketLoserKoreaList.map((marketLoserKorea,index) => (
+            <PriceRow
+                name={marketLoserKorea['name']}
+                currentValue={marketLoserKorea['value']}
+                change={marketLoserKorea['dailyChange']}
+                changePercentage={marketLoserKorea['dailyChangePercentage']}
+                country={marketLoserKorea['country']}
+                key={index}></PriceRow>
+        ))
+    } else {
+        marketLoserList = marketLoserUsList.map((marketLoserUs,index) => (
+            <PriceRow
+                name={marketLoserUs['name']}
+                currentValue={marketLoserUs['value']}
+                change={marketLoserUs['dailyChange']}
+                changePercentage={marketLoserUs['dailyChangePercentage']}
+                country={marketLoserUs['country']}
+                key={index}></PriceRow>
+        ))
+    }
+
     return (
         <div>
             <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 하락세!</h2>
             <div style={{minHeight:'20px'}}></div>
-            <CountrySelector></CountrySelector>
+            <CountrySelector
+                isKorea={isMarketLoserKorea}
+                onClickEvent={marketLoserCountryClickEvent}></CountrySelector>
             <div style={{minHeight:'20px'}}></div>
-            <PriceRow
-                image={require('../../images/Icon/icon_south_korea.png')}
-                name='LG에너지솔루션'
-                currentValue={2513.1}
-                change={15.1}
-                changePercentage={1.12}></PriceRow>
-            <PriceRow
-                image={require('../../images/Icon/icon_south_korea.png')}
-                name='삼성전자'
-                currentValue={799.4}
-                change={-24.1}
-                changePercentage={-2.93}></PriceRow>
-            <PriceRow
-                image={require('../../images/Icon/icon_south_korea.png')}
-                name='바텍'
-                currentValue={11454.4}
-                change={136.5}
-                changePercentage={1.21}></PriceRow>
-            <PriceRow
-                image={require('../../images/Icon/icon_south_korea.png')}
-                name='하이브'
-                currentValue={30666.4}
-                change={291.3}
-                changePercentage={0.96}></PriceRow>
-            <PriceRow
-                image={require('../../images/Icon/icon_south_korea.png')}
-                name='현대차'
-                currentValue={3777.25}
-                change={42.27}
-                changePercentage={1.13}></PriceRow>
-            <div style={{minHeight:'30px'}}></div>
+            {marketLoserList}
         </div>
     )
 }
