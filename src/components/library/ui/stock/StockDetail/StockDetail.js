@@ -3,6 +3,7 @@ import StockIncome from '../StockIncome/StockIncome';
 import StockDividend from '../StockDividend/StockDividend';
 import StockProducts from '../StockProducts/StockProducts';
 import StockNews from '../StockNews/StockNews';
+import StockExpertOpinion from '../StockExpertOpinion/StockExpertOpinion';
 import { useSelector,useDispatch } from "react-redux";
 import { changeDetailMenu } from '../../../../../_reducers/stock';
 
@@ -18,6 +19,8 @@ export default function StockDetail() {
         detailContents = <StockProducts></StockProducts>
     } else if (detailStockMenu === '뉴스') {
         detailContents = <StockNews></StockNews>
+    } else if (detailStockMenu === '전문가 의견') {
+        detailContents = <StockExpertOpinion></StockExpertOpinion>
     } else {
         detailContents = <StockIncome></StockIncome>
     }

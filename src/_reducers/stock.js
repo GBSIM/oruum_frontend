@@ -38,6 +38,13 @@ const initialState = {
 
     //Stock detail menu
     detailStockMenu: '매출과 영업이익',
+
+    //Expert
+    numberStrongBuy: 12,
+    numberBuy: 12,
+    numberHold: 12,
+    numberSell: 6,
+    numberStrongSell: 3,
 };
 
 export const changePricePlotPeriod = (period) => ({ type: CHANGE_PLOT_PERIOD, period });
