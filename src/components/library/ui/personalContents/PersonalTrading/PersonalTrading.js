@@ -20,22 +20,22 @@ export default function PersonalTrading() {
                     <h3 style={{margin:'0',color:'#696969'}}>지원님이 보유한 테슬라 주식은?</h3>
                     <div style={{height:'10px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
-                        <span style={{color:'#B9B9B9'}}>평균매수가</span>
+                        <span style={{color:'#B9B9B9',width:'80px'}}>평균매수가</span>
                         <h3 style={{color:'#333333',margin:'0'}}>$510.52</h3>
                     </div>
                     <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
-                        <span style={{color:'#B9B9B9'}}>총 주식 수</span>
+                        <span style={{color:'#B9B9B9',width:'80px'}}>총 주식 수</span>
                         <h3 style={{color:'#333333',margin:'0'}}>18주</h3>
                     </div>
                     <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
-                        <span style={{color:'#B9B9B9'}}>투자 수익</span>
+                        <span style={{color:'#B9B9B9',width:'80px'}}>투자 수익</span>
                         <h3 style={{color:'#34B199',margin:'0'}}>+$2162.15 (21.6%)</h3>
                     </div>
                     <div style={{height:'5px'}}></div>
                     <div style={{display:'flex',flexDirection:'row',alignItems:'baseline',columnGap:'10px'}}>
-                        <span style={{color:'#B9B9B9'}}>투자 비중</span>
+                        <span style={{color:'#B9B9B9',width:'80px'}}>투자 비중</span>
                         <h3 style={{color:'#333333',margin:'0'}}>42.7%</h3>
                     </div>
                 </div>
