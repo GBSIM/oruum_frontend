@@ -1,13 +1,13 @@
 import './DollarProfile.css';
 import LineGraph from '../../unit/LineGraph/LineGraph';
 import { useSelector,useDispatch } from "react-redux";
-import { changePricePlotPeriod } from '../../../../../_reducers/stock';
+import { changePricePlotPeriod } from '../../../../../_reducers/economy';
 
 export default function DollarProfile() {
     const {dollarCurrent,dollarDailyChange,dollarDailyChangePercentage,
            dollar5YearHigh,dollar5YearLow,dollar5YearAverage,
            dollarChangeFrom5YearAverage,dollarChangePercentageFrom5YearAverage,
-           dateArray,dollarPriceArray   } = useSelector(state => (state.economy));
+           dateArray,dollarPriceArray,plotPeriod} = useSelector(state => (state.economy));
 
     let lastDailyChangeString;
     let dailyPriceInfo;
@@ -73,7 +73,7 @@ export default function DollarProfile() {
 }
 
 function PeriodSelector () {
-    const {plotPeriod} = useSelector(state => state.stock);
+    const {plotPeriod} = useSelector(state => state.economy);
     const dispatch = useDispatch();
     const changeTo1Week = () => {
         dispatch(changePricePlotPeriod('1주'));
