@@ -1,8 +1,9 @@
 import './StockIncome.css';
 import { useSelector,useDispatch } from "react-redux";
+import { convert_Number_to_text } from '../../../function/DataConversion';
 
 export default function StockIncome() {
-    const {koreanName, currency} = useSelector(state => state.stock);
+    const {koreanName,currency,yearlyIncome} = useSelector(state => state.stock);
 
     let unitInformation;
     if (currency === '$') {
@@ -10,7 +11,16 @@ export default function StockIncome() {
     } else {
         unitInformation = <span style={{color: '#B9B9B9',fontSize:'14px'}}></span>
     }
-    
+
+    const yearArray = yearlyIncome["date"];
+    const revenueArray = yearlyIncome["revenue"];
+    const operatingIncomeArray = yearlyIncome["operatingIncome"];
+    const netIncomeArray = yearlyIncome["netIncome"];
+
+    const maximumValue = Math.max(Math.max(...revenueArray),Math.max(...operatingIncomeArray),Math.max(...netIncomeArray));
+
+    const maximumIncomeBarHeight = 100;
+
     return (
         <div>
             <h3 className='stock-income-title'>
@@ -19,24 +29,34 @@ export default function StockIncome() {
             <div style={{height:'30px'}}></div>
             <div className="stock-income-container">
                 <div className='stock-income-graph-4years-ago'>
-                    <IncomeBars year='2018' 
-                                netIncomeHeight='50px' operatingIncomeHeight='80px' revenueHeight='90px'></IncomeBars>
+                    <IncomeBars year={yearArray[0]}
+                                netIncomeHeight={netIncomeArray[0]/maximumValue*maximumIncomeBarHeight} 
+                                operatingIncomeHeight={operatingIncomeArray[0]/maximumValue*maximumIncomeBarHeight} 
+                                revenueHeight={revenueArray[0]/maximumValue*maximumIncomeBarHeight}></IncomeBars>
                 </div>
                 <div className='stock-income-graph-3years-ago'>
-                    <IncomeBars year='2019' 
-                                netIncomeHeight='50px' operatingIncomeHeight='80px' revenueHeight='90px'></IncomeBars>
+                    <IncomeBars year={yearArray[1]}
+                                netIncomeHeight={netIncomeArray[1]/maximumValue*maximumIncomeBarHeight} 
+                                operatingIncomeHeight={operatingIncomeArray[1]/maximumValue*maximumIncomeBarHeight} 
+                                revenueHeight={revenueArray[1]/maximumValue*maximumIncomeBarHeight}></IncomeBars>
                 </div>
                 <div className='stock-income-graph-2years-ago'>
-                    <IncomeBars year='2020' 
-                                netIncomeHeight='50px' operatingIncomeHeight='80px' revenueHeight='90px'></IncomeBars>
+                    <IncomeBars year={yearArray[2]}
+                                netIncomeHeight={netIncomeArray[2]/maximumValue*maximumIncomeBarHeight} 
+                                operatingIncomeHeight={operatingIncomeArray[2]/maximumValue*maximumIncomeBarHeight} 
+                                revenueHeight={revenueArray[2]/maximumValue*maximumIncomeBarHeight}></IncomeBars>
                 </div>
                 <div className='stock-income-graph-1year-ago'>
-                    <IncomeBars year='2021' 
-                                netIncomeHeight='50px' operatingIncomeHeight='80px' revenueHeight='90px'></IncomeBars>
+                    <IncomeBars year={yearArray[3]}
+                                netIncomeHeight={netIncomeArray[3]/maximumValue*maximumIncomeBarHeight} 
+                                operatingIncomeHeight={operatingIncomeArray[3]/maximumValue*maximumIncomeBarHeight} 
+                                revenueHeight={revenueArray[3]/maximumValue*maximumIncomeBarHeight}></IncomeBars>
                 </div>
                 <div className='stock-income-graph-current'>
-                    <IncomeBars year='2022' 
-                                netIncomeHeight='50px' operatingIncomeHeight='80px' revenueHeight='90px'></IncomeBars>
+                    <IncomeBars year={yearArray[4]}
+                                netIncomeHeight={netIncomeArray[4]/maximumValue*maximumIncomeBarHeight} 
+                                operatingIncomeHeight={operatingIncomeArray[4]/maximumValue*maximumIncomeBarHeight} 
+                                revenueHeight={revenueArray[4]/maximumValue*maximumIncomeBarHeight}></IncomeBars>
                 </div>
 
                 <div className='stock-income-header-revenue'>
@@ -52,51 +72,51 @@ export default function StockIncome() {
                 </div>
 
                 <div className='stock-income-revenue-4years-ago'>
-                    <span className='stock-income-value'>{'200B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(revenueArray[0],currency)}</span>
                 </div>
                 <div className='stock-income-revenue-3years-ago'>
-                    <span className='stock-income-value'>{'200B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(revenueArray[1],currency)}</span>
                 </div>
                 <div className='stock-income-revenue-2years-ago'>
-                    <span className='stock-income-value'>{'200B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(revenueArray[2],currency)}</span>
                 </div>
                 <div className='stock-income-revenue-1year-ago'>
-                    <span className='stock-income-value'>{'200B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(revenueArray[3],currency)}</span>
                 </div>
                 <div className='stock-income-revenue-current'>
-                    <span className='stock-income-value'>{'200B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(revenueArray[4],currency)}</span>
                 </div>
 
                 <div className='stock-income-operating-income-4years-ago'>
-                    <span className='stock-income-value'>{'100B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(operatingIncomeArray[0],currency)}</span>
                 </div>
                 <div className='stock-income-operating-income-3years-ago'>
-                    <span className='stock-income-value'>{'100B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(operatingIncomeArray[1],currency)}</span>
                 </div>
                 <div className='stock-income-operating-income-2years-ago'>
-                    <span className='stock-income-value'>{'100B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(operatingIncomeArray[2],currency)}</span>
                 </div>
                 <div className='stock-income-operating-income-1year-ago'>
-                    <span className='stock-income-value'>{'100B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(operatingIncomeArray[3],currency)}</span>
                 </div>
                 <div className='stock-income-operating-income-current'>
-                    <span className='stock-income-value'>{'100B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(operatingIncomeArray[4],currency)}</span>
                 </div>
 
                 <div className='stock-income-net-income-4years-ago'>
-                    <span className='stock-income-value'>{'50B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(netIncomeArray[0],currency)}</span>
                 </div>
                 <div className='stock-income-net-income-3years-ago'>
-                    <span className='stock-income-value'>{'50B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(netIncomeArray[1],currency)}</span>
                 </div>
                 <div className='stock-income-net-income-2years-ago'>
-                    <span className='stock-income-value'>{'50B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(netIncomeArray[2],currency)}</span>
                 </div>
                 <div className='stock-income-net-income-1year-ago'>
-                    <span className='stock-income-value'>{'50B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(netIncomeArray[3],currency)}</span>
                 </div>
                 <div className='stock-income-net-income-current'>
-                    <span className='stock-income-value'>{'50B'}</span>
+                    <span className='stock-income-value'>{convert_Number_to_text(netIncomeArray[4],currency)}</span>
                 </div>
             </div>
             <div style={{height:'30px'}}></div>
@@ -106,12 +126,31 @@ export default function StockIncome() {
 }
 
 function IncomeBars(props) {
+    let netIncomeBar;
+    netIncomeBar = <UnitBar color='#9AD8CD' height={String(props.netIncomeHeight)+'px'}></UnitBar>
+    if (props.netIncomeHeight >= 0) {
+    } else {
+        netIncomeBar = <UnitBar color='#F15E5E' height={String(Math.abs(props.netIncomeHeight))+'px'}></UnitBar>
+    }
+    let operatingIncomeBar;
+    if (props.operatingIncomeHeight >= 0) {
+        operatingIncomeBar = <UnitBar color='#34B199' height={String(props.operatingIncomeHeight)+'px'}></UnitBar>
+    } else {
+        operatingIncomeBar = <UnitBar color='#F15E5E' height={String(Math.abs(props.operatingIncomeHeight))+'px'}></UnitBar>
+    }
+    let revenueBar;
+    if (props.revenueHeight >= 0) {
+        revenueBar = <UnitBar color='#074B3F' height={String(props.revenueHeight)+'px'}></UnitBar>
+    } else {
+        revenueBar = <UnitBar color='#F15E5E' height={String(Math.abs(props.revenueHeight))+'px'}></UnitBar>
+    }
+
     return (
-        <div>
+        <div style={{flex:'1'}}>
             <div className='income-bars-container'>
-                <UnitBar color='#9AD8CD' height={props.netIncomeHeight}></UnitBar>
-                <UnitBar color='#34B199' height={props.operatingIncomeHeight}></UnitBar>
-                <UnitBar color='#074B3F' height={props.revenueHeight}></UnitBar>
+                {netIncomeBar}
+                {operatingIncomeBar}
+                {revenueBar}
             </div>
             <div style={{height:'5px'}}></div>
             <div className='income-bars-year-text-container'>

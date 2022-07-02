@@ -28,6 +28,14 @@ const initialState = {
     //Financial ratio
     per: 99.61,
 
+    //Finance
+    yearlyIncome: {
+      "date":[2018,2019,2020,2021,2022],
+      "revenue":[21461268000,24578000000,31536000000,53823000000,62190000000],
+      "operatingIncome":[-252840000,80000000,1994000000,6496000000,9606000000],
+      "netIncome":[-976091000,-862000000,690000000,5519000000,8399000000],
+    },
+
     //Stock detail menu
     detailStockMenu: '매출과 영업이익',
 };

@@ -31,7 +31,7 @@ export default function StockDetail() {
             </div>
             <div style={{height:'20px'}}></div>
             <StockDetailSelector></StockDetailSelector>
-            <div>
+            <div style={{minHeight: '400px'}}>
                 <div style={{height:'15px'}}></div>
                 {detailContents}
             </div>
