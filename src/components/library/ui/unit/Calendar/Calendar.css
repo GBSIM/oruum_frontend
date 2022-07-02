@@ -54,6 +54,7 @@
 .calendar-month-text {
     margin: 0;
     color: #333333;
+    margin-left: 3px;
 }
 .calendar-container {
     display: grid;
