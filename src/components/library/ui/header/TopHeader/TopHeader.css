@@ -72,6 +72,22 @@
     background: rgba(0,0,0,0);
 }
 
+.top-header-left-divider {
+    width: 20px;
+}
+
+.header-search-back-button {
+    display: none;
+}
+
+.header-search-back-image {
+    background: rgba(0,0,0,0);
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+}
+
+
 @media (max-width: 1024px) {
     .top-header-nav-menu-bar-container {
         display: none;
@@ -95,6 +111,9 @@
         height: 50px;
         box-shadow: none;
     }
+    .top-header-left-divider.on {
+        width: 0px;
+    }
     .top-header-logo {
         height: 30px; 
     }
@@ -108,5 +127,19 @@
     }
     .top-header-right-container {
         column-gap: 3px;
+    }
+    .header-search-back-button {
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+        border-radius: 80px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-search-back-button:hover {
+        background: #EFEFEF;
     }
 }

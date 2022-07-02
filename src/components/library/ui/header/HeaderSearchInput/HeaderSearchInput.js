@@ -1,6 +1,6 @@
 import './HeaderSearchInput.css';
 import { useSelector,useDispatch } from "react-redux";
-import { activateStockSearch } from '../../../../../_reducers/header';
+import { activateStockSearch, deactivateStockSearch } from '../../../../../_reducers/header';
 
 export default function HeaderSearchInput() {
     const dispatch = useDispatch();
@@ -12,14 +12,14 @@ export default function HeaderSearchInput() {
     if (isStockSearchActivated) {
         return (
             <button className="header-search-input-container on" onClick={stockSearchActivation}>
-                <img className='header-search-input-icon' src={require('../../images/Icon/icon_search_dark_grey.png')}></img>
+                <img className='header-search-input-icon on' src={require('../../images/Icon/icon_search_dark_grey.png')}></img>
                 <input className='header-search-input on' placeholder='종목을 검색하세요!'></input>
             </button>
         )
     } else {
         return (
             <button className="header-search-input-container off" onClick={stockSearchActivation}>
-                <img className='header-search-input-icon' src={require('../../images/Icon/icon_search_dark_grey.png')}></img>
+                <img className='header-search-input-icon off' src={require('../../images/Icon/icon_search_dark_grey.png')}></img>
                 <input className='header-search-input off' placeholder='종목을 검색하세요!'></input>
             </button>
         )

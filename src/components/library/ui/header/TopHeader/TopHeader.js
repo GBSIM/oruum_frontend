@@ -3,16 +3,23 @@ import TopNavMenuBar from '../../nav/TopNavMenuBar/TopNavMenuBar';
 import HeaderSearchInput from '../HeaderSearchInput/HeaderSearchInput';
 import { useSelector,useDispatch } from "react-redux";
 import { SearchScreen } from '../HeaderSearchInput/HeaderSearchInput';
+import { deactivateStockSearch } from '../../../../../_reducers/header';
 
 export default function TopHeader() {
     const {isStockSearchActivated} = useSelector(state => state.header);
+    const dispatch = useDispatch();
+    const stockSearchDeactivation = () => {
+        dispatch(deactivateStockSearch());
+    }
 
     let topHeaderLeft;
     if (isStockSearchActivated) {
         topHeaderLeft = 
         <div className='top-header-left-container'>
-            <div></div>
-            <div className='top-header-left-divider' style={{minWidth:'20px'}}></div>
+            <button className='header-search-back-button' onClick={stockSearchDeactivation}>
+                <img className='header-search-back-image' src={require('../../images/Icon/icon_back_dark_grey.png')}></img>
+            </button>
+            <div className='top-header-left-divider on'></div>
             <HeaderSearchInput></HeaderSearchInput>
         </div>
     } else {
