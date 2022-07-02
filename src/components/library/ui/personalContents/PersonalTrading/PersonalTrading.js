@@ -8,10 +8,10 @@ export default function PersonalTrading() {
             <div className='personal-trading-row-container'>
                 <img 
                     src={require('../../images/image/image_profile.png')}
-                    className='personal-asset-profile-image'></img>
+                    className='personal-trading-profile-image'></img>
             </div>
             <div style={{height:'5px'}}></div>
-            <div className='personal-asset-row-container'>
+            <div className='personal-trading-row-container'>
                 <h3 style={{margin:0,color:'#696969'}}>지원</h3>  
             </div>
             <div style={{height:'5px'}}></div>

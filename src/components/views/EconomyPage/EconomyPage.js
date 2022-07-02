@@ -5,6 +5,7 @@ import BottomNavMenuBar from '../../library/ui/nav/BottomNavMenuBar/BottomNavMen
 import TopHeader from '../../library/ui/header/TopHeader/TopHeader';
 import EconomyCalendar from '../../library/ui/economy/EconomyCalendar/EconomyCalendar';
 import DollarProfile from '../../library/ui/economy/DollarProfile/DollarProfile';
+import PersonalEconomy from '../../library/ui/personalContents/PersonalEconomy/PersonalEconomy';
 
 function EconomyPage() {
     return (
@@ -23,6 +24,9 @@ function EconomyPage() {
                 </div>
             </div>
             <BottomNavMenuBar></BottomNavMenuBar>
+            <div className="main-right-contents">
+                    <PersonalEconomy></PersonalEconomy>
+            </div>
         </div>
     )
 }

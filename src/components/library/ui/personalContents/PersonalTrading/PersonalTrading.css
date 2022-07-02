@@ -6,6 +6,15 @@
     width: 100%;
 }
 
+.personal-trading-profile-image {
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0);
+    border: 1px solid #F8F8F8;
+    border-radius: 100px;
+}
+
+
 .personal-trading-row-text-container {
     display: flex;
     flex-direction: row;
@@ -44,5 +53,12 @@
 @media (max-height: 1500px) {
     .personal-trading-calendar-container {
         display: none;
+    }
+}
+
+@media (max-width:1500px) {
+    .personal-trading-profile-image {
+        width: 90px;
+        height: 90px;
     }
 }

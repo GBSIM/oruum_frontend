@@ -2,7 +2,6 @@ import './PersonalAsset.css';
 import MiniPriceRow from '../../unit/MiniPriceRow/MiniPriceRow';
 import { useSelector,useDispatch } from "react-redux";
 
-
 export default function PersonalAsset() {
     const {currency} = useSelector(state => state.stock);
     const {name,assetCurrency,totalAsset,
