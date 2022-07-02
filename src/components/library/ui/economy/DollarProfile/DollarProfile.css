@@ -1,0 +1,199 @@
+.dollar-profile-row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dollar-profile-korean-name {
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+}
+
+.dollar-profile-english-name {
+    font-weight: 500;
+    color: #B9B9B9;
+}
+
+.dollar-profile-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.dollar-profile-current-price {
+    color: #333333;
+    margin: 0;
+}
+
+.dollar-profile-daily-change {
+    color: #34B199;
+    margin: 0;
+}
+
+.dollar-profile-daily-change.positivie {
+    color: #34B199;
+}
+
+.dollar-profile-daily-change.negative {
+    color: #F15E5E;
+}
+
+.period-button {
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.period-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.period-button.on {
+    color: #fff;
+    background: #34B199
+}
+
+.period-button.off {
+    color: #B9B9B9;
+    background: #fff;
+}
+
+.period-button.off:hover {
+    color: #696969;
+}
+
+.dollar-price-min-max-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.dollar-price-min-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.dollar-price-min-title {
+    color: #B9B9B9;
+}
+
+.dollar-price-min {
+    color: #F15E5E;
+}
+
+.dollar-price-max-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.dollar-price-max-title {
+    color: #B9B9B9;
+}
+
+.dollar-price-max {
+    color: #34B199;
+}
+
+.dollar-change-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.dollar-change-price-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.dollar-change-price-text {
+    color: #696969;
+    font-weight: 500;
+}
+
+.dollar-change-price {
+    color: #F15E5E;
+}
+
+.dollar-change-price.high {
+    color: #F15E5E;
+}
+
+.dollar-change-price.low {
+    color: #34B199;
+}
+
+
+.dollar-profile-spacer-level1 {
+    height: 20px;
+}
+
+.dollar-profile-spacer-level2 {
+    height: 30px;
+}
+
+.dollar-profile-spacer-level3 {
+    height: 50px;
+}
+
+.dollar-basic-info-title {
+    color: #B9B9B9;
+}
+
+.dollar-basic-infos-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.dollar-basic-info-value {
+    color: #333333;
+    margin: 0;
+}
+
+@media (max-width: 1500px) {
+    .dollar-profile-spacer-level1 {
+        height: 10px;
+    }
+    .dollar-profile-spacer-level2 {
+        height: 20px;
+    }
+    .dollar-profile-spacer-level3 {
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dollar-profile-spacer-level1.top {
+        height: 0px;
+    }
+    .period-button {
+        padding: 5px 15px 5px 15px;
+        border-radius: 6px;
+    }
+    .dollar-change-price-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dollar-change-price-text-container {
+        width: 100%;
+    }
+}
