@@ -11,12 +11,18 @@ import MarketSummary from "../../library/ui/home/MarketSummary/MarketSummary";
 import MarketGainer from "../../library/ui/home/MarketGainer/MarketGainer";
 import MarketLoser from "../../library/ui/home/MarketLoser/MarketLoser";
 import EarningsCalendar from "../../library/ui/home/EarningsCalendar/EarningsCalendar";
+import { deactivateStockSearch } from '../../../_reducers/header';
 
 export default function HomePage() {
+    const dispatch = useDispatch();
+    const stockSearchDeactivation = () => {
+        dispatch(deactivateStockSearch());
+    }
+
     return (
         <div className='page'>
             <TopHeader></TopHeader>
-            <div className="main-contents">
+            <div className="main-contents" onClick={stockSearchDeactivation}>
                 <div className="main-center-contents">
                     <div className="home-page-top-space"></div>
                     <div className="unit-box home-top">

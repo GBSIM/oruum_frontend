@@ -6,6 +6,7 @@
     height: 40px;
     background: #F5F5F4;
     border-radius: 100px;
+    padding-left: 10px;
 }
 
 .header-search-input {
@@ -19,17 +20,79 @@
     width: 20px;
     height: 20px;
     min-width: 20px;
-    margin-left: 10px;
     background: rgba(0,0,0,0);
 }
 
+.search-screen {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-shadow: 4px 4px 10px 0px rgba(220, 220, 220, 1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+}
+
+.search-candidate-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+.search-candidate-row:hover {
+    background: #FAFAFA;
+}
+
+.search-candidate-image-container {
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    background: #34B199;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-candidate-image {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    background: rgba(0,0,0,0);
+}
+
+.search-candidate-korean-name {
+    color: #333333;
+    font-weight: 500;
+}
+
+.search-candidate-ticker {
+    color: #696969;
+    font-weight: 500;
+}
+
+.search-candidate-english-name {
+    color: #696969;
+    font-weight: 500;
+}
+
 @media (max-width:1300px) {
-    .header-search-input {
-        display: none;  
+    .header-search-input.off {
+        display: none;
     }
-    .header-search-input-container {
+    .header-search-input-container.off {
         width: 40px;
         justify-content: center;
+        padding: 0px;
     }
 
     .header-search-input-container:hover {
@@ -41,7 +104,16 @@
 }
 
 @media (max-width: 600px) {
+    .search-screen {
+        top: 45px;
+        left: 10px;
+        height: 400px;
+        width: calc(100vw - 20px);
+    }
     .header-search-input-container {
+        background: rgba(255,255,255,0);
+    }
+    .header-search-input-container:hover {
         background: rgba(255,255,255,0);
     }
     .header-search-input-icon {

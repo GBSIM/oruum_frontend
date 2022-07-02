@@ -8,12 +8,19 @@ import StockCheckPoint from '../../library/ui/stock/StockCheckPoint/StockCheckPo
 import StockDetail from '../../library/ui/stock/StockDetail/StockDetail';
 
 import PersonalTrading from '../../library/ui/personalContents/PersonalTrading/PersonalTrading';
+import { useSelector,useDispatch } from "react-redux";
+import { deactivateStockSearch } from '../../../_reducers/header';
 
 export default function StockPage() {
+    const dispatch = useDispatch();
+    const stockSearchDeactivation = () => {
+        dispatch(deactivateStockSearch());
+    }
+
     return (
         <div className='page'>
             <TopHeader></TopHeader>
-            <div className='main-contents'>
+            <div className='main-contents' onClick={stockSearchDeactivation}>
                 <div className='main-center-contents'>
                     <div className='stock-page-top-space'></div>
                     <div className="unit-box stock-profile">

@@ -79,7 +79,7 @@
     .top-header-left-container {
         flex:1;
     }
-    .top-header-left-divider {
+    .top-header-left-divider.off {
         flex: 1;
     }
     .top-header-right-container {
