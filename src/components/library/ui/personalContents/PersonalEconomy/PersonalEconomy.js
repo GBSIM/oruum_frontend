@@ -9,12 +9,12 @@ export default function PersonalEconomy() {
 
     if (dollarExchangeProfit >= 0) {
         dollarProfitText = <h3 style={{color:'#34B199',margin:'0'}}>
-        {(dollarExchangeProfit).toLocaleString(undefined, {
+        ₩{(dollarExchangeProfit).toLocaleString(undefined, {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 2})} ({Math.abs(dollarExchnageProfitPecentage)}%)</h3>
     } else {
         dollarProfitText = <h3 style={{color:'#F15E5E',margin:'0'}}>
-        {(dollarExchangeProfit).toLocaleString(undefined, {
+        ₩{(dollarExchangeProfit).toLocaleString(undefined, {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 2})} ({Math.abs(dollarExchnageProfitPecentage)}%)</h3>
     }
