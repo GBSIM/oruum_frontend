@@ -53,6 +53,7 @@
 @media (max-width: 600px) {
     .opinion-title {
         font-size: 12px;
+        width: 45px;
     }
     .opinions-container {
         padding-left: 0px;
