@@ -13,6 +13,7 @@ export default function TopHeader() {
     }
 
     let topHeaderLeft;
+    let topHeaderRight;
     if (isStockSearchActivated) {
         topHeaderLeft = 
         <div className='top-header-left-container'>
@@ -22,12 +23,40 @@ export default function TopHeader() {
             <div className='top-header-left-divider on'></div>
             <HeaderSearchInput></HeaderSearchInput>
         </div>
+        topHeaderRight = 
+        <div className='top-header-right-container'>
+            <div style={{minWidth:'0px'}}></div>
+            <button className='top-header-circle-button on'>
+                <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_notification_dark_grey.png')}></img>
+            </button>   
+            <button className='top-header-circle-button on'>
+                <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_more_dark_grey.png')}></img>
+            </button>
+            <button className='top-header-login-button'>
+                로그인
+            </button>
+            <div style={{minWidth:'20px'}}></div>
+        </div>
     } else {
         topHeaderLeft = 
         <div className='top-header-left-container'>
             <img className='top-header-logo' src={require('../../images/OruumLogo/logo_oruum.png')}></img>
             <div className='top-header-left-divider off' style={{minWidth:'20px'}}></div>
             <HeaderSearchInput></HeaderSearchInput>
+        </div>
+        topHeaderRight = 
+        <div className='top-header-right-container'>
+            <div style={{minWidth:'0px'}}></div>
+            <button className='top-header-circle-button'>
+                <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_notification_dark_grey.png')}></img>
+            </button>   
+            <button className='top-header-circle-button'>
+                <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_more_dark_grey.png')}></img>
+            </button>
+            <button className='top-header-login-button'>
+                로그인
+            </button>
+            <div style={{minWidth:'20px'}}></div>
         </div>
     }
 
@@ -38,19 +67,7 @@ export default function TopHeader() {
             <div className='top-header-nav-menu-bar-container'>
                 <TopNavMenuBar></TopNavMenuBar>
             </div>
-            <div className='top-header-right-container'>
-                <div style={{minWidth:'0px'}}></div>
-                <button className='top-header-circle-button'>
-                    <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_notification_dark_grey.png')}></img>
-                </button>   
-                <button className='top-header-circle-button'>
-                    <img className='top-header-circle-button-image' src={require('../../images/Icon/icon_more_dark_grey.png')}></img>
-                </button>
-                <button className='top-header-login-button'>
-                    로그인
-                </button>
-                <div style={{minWidth:'20px'}}></div>
-            </div>            
+            {topHeaderRight}
         </div>
     )
 }

@@ -52,11 +52,11 @@ function SearchCandidateRow(props) {
             <div className='search-candidate-image-container'>
                 <img src={require('../../images/Icon/icon_search_white.png')} className='search-candidate-image'></img>
             </div>
-            <span className='search-candidate-korean-name'>{props.koreanName}</span>
-            <div style={{background: '#696969',width:'1px',height:'16px'}}></div>
-            <span className='search-candidate-ticker'>{props.ticker}</span>
-            <div style={{background: '#696969',width:'1px',height:'16px'}}></div>
-            <span className='search-candidate-english-name'>{props.englishName}</span>
+            <span className='search-candidate-text korean-name'>{props.koreanName}</span>
+            <div style={{background: '#B9B9B9',width:'1px',height:'16px'}}></div>
+            <span className='search-candidate-text ticker'>{props.ticker}</span>
+            <div style={{background: '#B9B9B9',width:'1px',height:'16px'}}></div>
+            <span className='search-candidate-text english-name'>{props.englishName}</span>
         </button>
     )
 }

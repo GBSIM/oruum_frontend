@@ -120,6 +120,9 @@
     .top-header-circle-button {
         background: rgba(255,255,255,0);
     }
+    .top-header-circle-button.on {
+        display: none;
+    }
     .top-header-circle-button-image {
         width: 26px;
         height: 26px;
