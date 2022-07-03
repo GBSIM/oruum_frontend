@@ -14,7 +14,7 @@ export default function MoneyRatio() {
             <div style={{height:'25px'}}></div>
             <RatioBar
                 title='현금'
-                color='#EBB00C'
+                color='#FFC420'
                 unit='₩'
                 value={wonDeposit}
                 ratio={depositRatio}></RatioBar>
@@ -31,7 +31,7 @@ export default function MoneyRatio() {
                 <LineGraph
                     xdata={moneyRatioDateArray}
                     ydata={moneyRatioArray}
-                    color='#F3CF6D'></LineGraph>
+                    color='#FFC420'></LineGraph>
             </div>
             <div style={{height:'30px'}}></div>
             <div className='money-ratio-row-container'>
@@ -98,7 +98,7 @@ function PeriodSelector () {
 function PeriodButton(props) {
     if (props.isOn) {
         return (
-            <button className='period-button on' style={{background:'#EBB00C'}}>
+            <button className='period-button on' style={{background:'#FFC420'}}>
                 {props.periodName}
             </button>
         )

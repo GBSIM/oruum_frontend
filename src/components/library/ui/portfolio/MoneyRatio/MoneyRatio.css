@@ -1,6 +1,6 @@
 .money-ratio-title {
     margin: 0px;
-    color: #696969;
+    color: #333;
     font-weight: 500;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .ratio-bar {
-    background: #F3CF6D;
+    background: #FFC420;
     width: 90px;
     height: 25px;
     border-radius: 4px;

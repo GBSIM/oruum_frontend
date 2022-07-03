@@ -33,7 +33,7 @@ export default function DollarProfile() {
             </div>
             <div className='dollar-profile-spacer-level2'></div>
             <div className="dollar-profile-row-container">
-                <img src={require('../../images/Icon/icon_dollar_yellow.png')} className='dollar-profile-icon'></img>
+                <img src={require('../../images/Icon/icon_dollar_bright_yellow.png')} className='dollar-profile-icon'></img>
             </div>
             <div className='dollar-profile-spacer-level3'></div>
             <div className="dollar-profile-row-container">

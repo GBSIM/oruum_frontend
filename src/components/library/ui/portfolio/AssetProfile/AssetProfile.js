@@ -32,7 +32,7 @@ export default function AssetProfile() {
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">
-                <img src={require('../../images/Icon/icon_money_pocket_yellow.png')} className='stock-profile-icon'></img>
+                <img src={require('../../images/Icon/icon_money_pocket_bright_yellow.png')} className='stock-profile-icon'></img>
             </div>
             <div className='stock-profile-spacer-level3'></div>
             <div className="asset-profile-row-container right">
