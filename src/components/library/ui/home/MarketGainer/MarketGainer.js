@@ -35,13 +35,15 @@ export default function MarketGainer() {
 
     return (
         <div>
-            <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 상승세!</h2>
+            <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 상승세</h2>
             <div style={{minHeight:'20px'}}></div>
             <CountrySelector 
                 isKorea={isMarketGainerKorea}
                 onClickEvent={marketGainerCountryClickEvent}></CountrySelector>
             <div style={{minHeight:'20px'}}></div>
-            {marketGainerList}
+            <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
+                {marketGainerList}
+            </div>
         </div>
     )
 }

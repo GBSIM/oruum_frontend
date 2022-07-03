@@ -42,7 +42,7 @@ export default function EconomyCalendar() {
                 isKorea={isEconomyCalendarKorea}
                 onClickEvent={economyCalendarCountryClickEvent}></CountrySelector>
             <div style={{height:'30px'}}></div>
-            <div>
+            <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
                 {economyEventList}
             </div>
             <div style={{height:'30px'}}></div>

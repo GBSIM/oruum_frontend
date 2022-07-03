@@ -19,7 +19,7 @@ export default function StockCheckPoint() {
                               '전기차뿐만 아니라 스페이스X, 스타링크, 휴머노이드 로봇 등 시너지를 일으킬 수 있는 다양한 사업']}></CheckPoints>
             <div style={{height:'30px'}}></div>
             <CheckPoints
-                title={koreanName + ', 좀 더 생각해봐야...?!'}
+                title={koreanName + ', 좀 더 생각해봐야...'}
                 titleImage={require('../../images/Icon/icon_minus_light_black.png')}
                 textImage={require('../../images/Icon/icon_danger_yellow.png')}
                 checkPoints={['과도하게 높은 이익 대비 주가',

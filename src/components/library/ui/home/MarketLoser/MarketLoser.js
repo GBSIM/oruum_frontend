@@ -35,13 +35,15 @@ export default function MarketLoser() {
 
     return (
         <div>
-            <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 하락세!</h2>
+            <h2 style={{color:'#333333',margin:'0'}}>오늘 최고의 하락세</h2>
             <div style={{minHeight:'20px'}}></div>
             <CountrySelector
                 isKorea={isMarketLoserKorea}
                 onClickEvent={marketLoserCountryClickEvent}></CountrySelector>
             <div style={{minHeight:'20px'}}></div>
-            {marketLoserList}
+            <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
+                {marketLoserList}
+            </div>
         </div>
     )
 }
