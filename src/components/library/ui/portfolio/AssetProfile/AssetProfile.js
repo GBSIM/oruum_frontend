@@ -26,7 +26,7 @@ export default function AssetProfile() {
             <div className="asset-profile-row-container">
                 <h2 className="asset-profile-title">나의 자산</h2>
             </div>
-            <div className='asset-profile-spacer-level2'></div>
+            <div style={{height:'30px'}}></div>
             <div className="asset-profile-row-container right">
                 <span className="asset-profile-subtitle">보유자산평가액</span>
             </div>
@@ -36,21 +36,22 @@ export default function AssetProfile() {
             <div className="asset-profile-row-container right">
                 {dailyAssetChangeText}
             </div>
-            <div className='asset-profile-spacer-level2'></div>
+            <div style={{height:'40px'}}></div>
             <PeriodSelector></PeriodSelector>
             <div className="dollar-profile-row-container">
                 <LineGraph
                     xdata={totalAssetDateArray}
                     ydata={totalAssetArray}></LineGraph>
             </div>
-            <div className='asset-profile-spacer-level2'></div>
+            {/* <div className='asset-profile-spacer-level2'></div> */}
+            <div style={{height:'30px'}}></div>
             <div className="asset-profile-row-container">
                 <AssetBasicInfos
                     yearlyHighest={totalAssetYealyHighest}
                     yearlyLowest={totalAssetYealyLowest}
                     unit={assetCurrency}></AssetBasicInfos>
             </div>
-            <div style={{height:'20px'}}></div>
+            <div style={{height:'30px'}}></div>
             <div className="asset-profile-row-container center">
                 <AssetChange 
                     change={assetYearlyChange} 
