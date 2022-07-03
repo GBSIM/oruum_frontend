@@ -11,35 +11,44 @@ export default function AssetProfile() {
     let dailyAssetChangeText;
     if (dailyAssetChange >= 0) {
         dailyAssetChangeText = 
-        <h2 className="asset-profile-daily-asset-change postiive">
-            +{dailyAssetChange.toLocaleString()} ({dailyAssetChangePercentage})
-        </h2>
+        <h3 className="asset-profile-daily-asset-change postiive">
+            +{dailyAssetChange.toLocaleString()} ({dailyAssetChangePercentage}%)
+        </h3>
     } else {
         dailyAssetChangeText = 
-        <h2 className="asset-profile-daily-asset-change negative">
-            {dailyAssetChange.toLocaleString()} ({Math.abs(dailyAssetChangePercentage)})
-        </h2>
+        <h3 className="asset-profile-daily-asset-change negative">
+            {dailyAssetChange.toLocaleString()} ({Math.abs(dailyAssetChangePercentage)}%)
+        </h3>
     }
 
     return (
         <div>
+            <div className='asset-profile-spacer-level1 top'></div>
             <div className="asset-profile-row-container">
-                <h3 className="asset-profile-title">나의 자산</h3>
+                <h2 className="asset-profile-title">나의 자산</h2>
             </div>
-            <div style={{height:'5px'}}></div>
+            <div className="asset-profile-row-container">
+                <span className="asset-profile-subtitle">보유자산평가액</span>
+            </div>
+            <div className='asset-profile-spacer-level2'></div>
+            <div className="asset-profile-row-container">
+                <img src={require('../../images/image/image_profile.png')} className='asset-profile-icon'></img>
+            </div>
+            <div className='asset-profile-spacer-level3'></div>
             <div className="asset-profile-row-container">
                 <h1 className="asset-profile-total-asset">{assetCurrency}{(totalAsset).toLocaleString()}</h1>
             </div>
             <div className="asset-profile-row-container">
                 {dailyAssetChangeText}
             </div>
-            <div style={{height:'30px'}}></div>
+            <div className='asset-profile-spacer-level2'></div>
             <PeriodSelector></PeriodSelector>
             <div className="dollar-profile-row-container">
                 <LineGraph
                     xdata={totalAssetDateArray}
                     ydata={totalAssetArray}></LineGraph>
             </div>
+            <div className='asset-profile-spacer-level2'></div>
             <div className="asset-profile-row-container">
                 <AssetBasicInfos
                     yearlyHighest={totalAssetYealyHighest}
@@ -125,14 +134,14 @@ function AssetChange(props) {
     if (props.change >= 0) {
         changeText = 
         <div className='asset-change-price-text-container'>
-            <h2 className='asset-change-price high'>+{props.change} ({props.changePercentage}%)</h2>
+            <h2 className='asset-change-price high'>+{props.change.toLocaleString()} ({props.changePercentage}%)</h2>
             <div style={{width:'10px'}}></div>
             <span className='portfolio-change-price-text'>증가했어요.</span>
         </div>
     } else {
         changeText = 
         <div className='asset-change-price-text-container'>
-            <h2 className='asset-change-price low'>{props.change} ({props.changePercentage}%)</h2>
+            <h2 className='asset-change-price low'>{props.change.toLocaleString()} ({props.changePercentage}%)</h2>
             <div style={{width:'10px'}}></div>
             <span className='asset-change-price-text'>감소했어요.</span>
         </div>
@@ -140,12 +149,16 @@ function AssetChange(props) {
 
 
     return (
-        <div className='asset-change-price-container'>
-            <div className='asset-change-price-text-container'>
-                <span className='asset-change-price-text'>지난 1년 간</span>
+        <div>
+            <div className='asset-change-price-container'>
+                <div className='asset-change-price-text-container'>
+                    <span className='asset-change-price-text'>지난 1년 간</span>
+                </div>
             </div>
-            <div style={{width:'10px'}}></div>
-            {changeText}
+            <div className='asset-change-price-container'>
+                {changeText}
+            </div>
         </div>
+        
     )
 }
