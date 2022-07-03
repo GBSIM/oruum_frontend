@@ -44,6 +44,7 @@ export default function MarketLoser() {
             <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
                 {marketLoserList}
             </div>
+            <div style={{minHeight:'50px'}}></div>
         </div>
     )
 }

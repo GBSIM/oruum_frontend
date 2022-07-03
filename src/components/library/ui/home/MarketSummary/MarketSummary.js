@@ -21,7 +21,7 @@ export default function MarketSummary() {
             <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
                 {marketIndexRowList}
             </div>
-            <div style={{minHeight:'30px'}}></div>
+            <div style={{minHeight:'50px'}}></div>
         </div>
     )
 }

@@ -44,6 +44,7 @@ export default function MarketGainer() {
             <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
                 {marketGainerList}
             </div>
+            <div style={{minHeight:'50px'}}></div>
         </div>
     )
 }

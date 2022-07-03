@@ -23,10 +23,18 @@ export default function AssetProfile() {
 
     return (
         <div>
-            <div className="asset-profile-row-container">
+            <div className='asset-profile-spacer-level1 top'></div>
+            <div className="asset-profile-row-container center">
                 <h2 className="asset-profile-title">나의 자산</h2>
             </div>
-            <div style={{height:'30px'}}></div>
+            <div className="asset-profile-row-container center">
+                <span className="asset-profile-subtitle">총 자산 요약</span>
+            </div>
+            <div className='stock-profile-spacer-level2'></div>
+            <div className="stock-profile-row-container">
+                <img src={require('../../images/Icon/icon_money_pocket_yellow.png')} className='stock-profile-icon'></img>
+            </div>
+            <div style={{height:'17px'}}></div>
             <div className="asset-profile-row-container right">
                 <span className="asset-profile-subtitle">보유자산평가액</span>
             </div>
@@ -36,7 +44,7 @@ export default function AssetProfile() {
             <div className="asset-profile-row-container right">
                 {dailyAssetChangeText}
             </div>
-            <div style={{height:'40px'}}></div>
+            <div style={{height:'20px'}}></div>
             <PeriodSelector></PeriodSelector>
             <div className="dollar-profile-row-container">
                 <LineGraph
