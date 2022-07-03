@@ -23,6 +23,7 @@
     font-weight: 500;
     color: #B9B9B9;
     margin: 0;
+    text-align: right;
 }
 
 .asset-profile-icon {
@@ -34,10 +35,12 @@
 .asset-profile-total-asset {
     color: #333333;
     margin: 0;
+    text-align: right;
 }
 
 .asset-profile-daily-asset-change {
     margin: 0;
+    text-align: right;
 }
 
 .asset-profile-daily-asset-change.postiive {
