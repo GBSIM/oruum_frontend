@@ -126,7 +126,7 @@ function MoneyRatioBasicInfo(props) {
     return (
         <div className='money-ratio-basic-info-container'>
             <span className='money-ratio-basic-info-title'>{props.title}</span>
-            <h3 className='money-ratio-basic-info-value'>{props.value}</h3>
+            <h3 className='money-ratio-basic-info-value'>{props.value}%</h3>
         </div>
     )
 }
