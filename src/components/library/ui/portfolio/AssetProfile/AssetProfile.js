@@ -23,22 +23,17 @@ export default function AssetProfile() {
 
     return (
         <div>
-            <div className='asset-profile-spacer-level1 top'></div>
             <div className="asset-profile-row-container">
                 <h2 className="asset-profile-title">나의 자산</h2>
             </div>
-            <div className="asset-profile-row-container">
+            <div className='asset-profile-spacer-level2'></div>
+            <div className="asset-profile-row-container right">
                 <span className="asset-profile-subtitle">보유자산평가액</span>
             </div>
-            <div className='asset-profile-spacer-level2'></div>
-            <div className="asset-profile-row-container">
-                <img src={require('../../images/image/image_profile.png')} className='asset-profile-icon'></img>
-            </div>
-            <div className='asset-profile-spacer-level3'></div>
-            <div className="asset-profile-row-container">
+            <div className="asset-profile-row-container right">
                 <h1 className="asset-profile-total-asset">{assetCurrency}{(totalAsset).toLocaleString()}</h1>
             </div>
-            <div className="asset-profile-row-container">
+            <div className="asset-profile-row-container right">
                 {dailyAssetChangeText}
             </div>
             <div className='asset-profile-spacer-level2'></div>
@@ -56,10 +51,11 @@ export default function AssetProfile() {
                     unit={assetCurrency}></AssetBasicInfos>
             </div>
             <div style={{height:'20px'}}></div>
-            <div className="asset-profile-row-container">
+            <div className="asset-profile-row-container center">
                 <AssetChange 
                     change={assetYearlyChange} 
-                    changePercentage={assetYearlyChangePercentage}></AssetChange>
+                    changePercentage={assetYearlyChangePercentage}
+                    unit={assetCurrency}></AssetChange>
             </div>
         </div>
     )
@@ -134,14 +130,14 @@ function AssetChange(props) {
     if (props.change >= 0) {
         changeText = 
         <div className='asset-change-price-text-container'>
-            <h2 className='asset-change-price high'>+{props.change.toLocaleString()} ({props.changePercentage}%)</h2>
+            <h2 className='asset-change-price high'>{props.unit + props.change.toLocaleString()} ({props.changePercentage}%)</h2>
             <div style={{width:'10px'}}></div>
             <span className='portfolio-change-price-text'>증가했어요.</span>
         </div>
     } else {
         changeText = 
         <div className='asset-change-price-text-container'>
-            <h2 className='asset-change-price low'>{props.change.toLocaleString()} ({props.changePercentage}%)</h2>
+            <h2 className='asset-change-price low'>{props.unit + props.change.toLocaleString()} ({props.changePercentage}%)</h2>
             <div style={{width:'10px'}}></div>
             <span className='asset-change-price-text'>감소했어요.</span>
         </div>
