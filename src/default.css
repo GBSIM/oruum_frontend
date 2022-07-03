@@ -178,6 +178,7 @@ span {
 	.unit-box {
 		width: 100%;
 		flex-shrink: 1;
+		border: 1px solid rgba(245, 245, 244, 1);
 		border-right:0px;
 		border-left: 0px;
 		box-shadow: none;

@@ -26,7 +26,7 @@ function EconomyPage() {
                         <DollarProfile></DollarProfile>
                     </div>
                     <div style={{height:'20px'}}></div>
-                    <div className="unit-box economy-top">
+                    <div className="unit-box">
                         <EconomyCalendar></EconomyCalendar>
                     </div>
                 </div>
