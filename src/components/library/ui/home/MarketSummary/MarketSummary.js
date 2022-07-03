@@ -18,7 +18,9 @@ export default function MarketSummary() {
         <div>
             <h2 style={{color:'#333333',margin:'0'}}>오늘의 지수</h2>
             <div style={{minHeight:'15px'}}></div>
-            {marketIndexRowList}
+            <div style={{display:'flex',flexDirection:'column',rowGap:'7px'}}>
+                {marketIndexRowList}
+            </div>
             <div style={{minHeight:'30px'}}></div>
         </div>
     )
