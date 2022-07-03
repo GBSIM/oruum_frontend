@@ -51,7 +51,8 @@ export default function StockProfile() {
             <div className="stock-profile-row-container">
                 <LineGraph
                     xdata={dateArray}
-                    ydata={closePriceArray}></LineGraph>
+                    ydata={closePriceArray}
+                    color='#9AD8CD'></LineGraph>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">

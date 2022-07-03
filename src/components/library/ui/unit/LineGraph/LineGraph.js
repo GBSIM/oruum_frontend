@@ -22,8 +22,8 @@ export default function LineGraph(props) {
                         labels: props.xdata,
                         datasets: [
                             {
-                            backgroundColor: 'rgba(75,192,192,1)',
-                            borderColor: 'rgba(154,216,205,1)',
+                            backgroundColor: props.color,
+                            borderColor: props.color,
                             borderWidth: 3,
                             data: props.ydata,
                             pointRadius: 0

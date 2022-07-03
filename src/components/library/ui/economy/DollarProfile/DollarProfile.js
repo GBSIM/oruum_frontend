@@ -49,7 +49,8 @@ export default function DollarProfile() {
             <div className="dollar-profile-row-container">
                 <LineGraph
                     xdata={dateArray}
-                    ydata={dollarPriceArray}></LineGraph>
+                    ydata={dollarPriceArray}
+                    color='#9AD8CD'></LineGraph>
             </div>
             <div className='stock-profile-spacer-level2'></div>
             <div className="stock-profile-row-container">

@@ -49,7 +49,8 @@ export default function AssetProfile() {
             <div className="dollar-profile-row-container">
                 <LineGraph
                     xdata={totalAssetDateArray}
-                    ydata={totalAssetArray}></LineGraph>
+                    ydata={totalAssetArray}
+                    color='#9AD8CD'></LineGraph>
             </div>
             {/* <div className='asset-profile-spacer-level2'></div> */}
             <div style={{height:'30px'}}></div>
