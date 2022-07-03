@@ -124,11 +124,11 @@
 }
 
 .asset-change-price.high {
-    color: #F15E5E;
+    color: #34B199;
 }
 
 .asset-change-price.low {
-    color: #34B199;
+    color: #F15E5E;
 }
 
 .asset-profile-spacer-level1 {
