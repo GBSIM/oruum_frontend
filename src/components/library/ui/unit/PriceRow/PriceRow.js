@@ -22,7 +22,7 @@ export default function PriceRow(props) {
                     <div style={{background:'rgba(0,0,0,0)',display:'flex',flexDirection:'row',alignItems:'center'}}>
                         <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#333333'}}>{props.currentValue.toLocaleString()}</h3>
                         <div style={{background:'rgba(0,0,0,0)',minWidth:'10px'}}></div>
-                        <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#34B199'}}>+{props.change.toLocaleString()} (+{props.changePercentage}%)</h3>
+                        <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#34B199'}}>+{props.change.toLocaleString()} ({props.changePercentage}%)</h3>
                     </div>
                 </div>
             </button>
@@ -39,7 +39,7 @@ export default function PriceRow(props) {
                     <div style={{background:'rgba(0,0,0,0)',display:'flex',flexDirection:'row',alignItems:'center'}}>
                         <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#333333'}}>{props.currentValue.toLocaleString()}</h3>
                         <div style={{background:'rgba(0,0,0,0)',minWidth:'10px'}}></div>
-                        <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#F15E5E'}}>{props.change.toLocaleString()} ({props.changePercentage}%)</h3>
+                        <h3 style={{background:'rgba(0,0,0,0)',margin:'0',color:'#F15E5E'}}>{props.change.toLocaleString()} ({Math.abs(props.changePercentage)}%)</h3>
                     </div>
                 </div>
             </button>

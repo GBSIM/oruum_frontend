@@ -23,10 +23,6 @@ export default function PortfolioPage() {
                         <AssetProfile></AssetProfile>
                     </div>
                     <div style={{height:'20px'}}></div>
-                    <div className="unit-box">
-                        <MoneyRatio></MoneyRatio>
-                    </div>
-                    <div style={{height:'20px'}}></div>
                 </div>
             </div>
             <BottomNavMenuBar></BottomNavMenuBar>

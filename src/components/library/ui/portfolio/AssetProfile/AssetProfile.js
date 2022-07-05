@@ -2,11 +2,12 @@ import './AssetProfile.css';
 import LineGraph from '../../unit/LineGraph/LineGraph';
 import { useSelector,useDispatch } from "react-redux";
 import { changePricePlotPeriod } from '../../../../../_reducers/user';
+import PriceRow from '../../unit/PriceRow/PriceRow';
 
 export default function AssetProfile() {
     const {totalAsset,dailyAssetChange,dailyAssetChangePercentage,assetCurrency,
            totalAssetDateArray,totalAssetArray,totalAssetYealyHighest,totalAssetYealyLowest,
-           assetYearlyChange,assetYearlyChangePercentage} = useSelector(state => (state.user));
+           assetYearlyChange,assetYearlyChangePercentage,wonDeposit} = useSelector(state => (state.user));
 
     let dailyAssetChangeText;
     if (dailyAssetChange >= 0) {
@@ -23,20 +24,12 @@ export default function AssetProfile() {
 
     return (
         <div>
-            <div className='asset-profile-spacer-level1 top'></div>
-            <div className="asset-profile-row-container center">
+            <div className="asset-profile-row-container left">
                 <h2 className="asset-profile-title">나의 자산</h2>
             </div>
-            <div className="asset-profile-row-container center">
-                <span className="asset-profile-subtitle">총 자산 요약</span>
-            </div>
-            <div className='stock-profile-spacer-level2'></div>
-            <div className="stock-profile-row-container">
-                <img src={require('../../images/Icon/icon_money_pocket_bright_yellow.png')} className='stock-profile-icon'></img>
-            </div>
-            <div className='stock-profile-spacer-level3'></div>
+            <div style={{height:'20px'}}></div>
             <div className="asset-profile-row-container right">
-                <span className="asset-profile-subtitle">보유자산평가액</span>
+                <span className="asset-profile-subtitle">총 자산</span>
             </div>
             <div className="asset-profile-row-container right">
                 <h1 className="asset-profile-total-asset">{assetCurrency}{(totalAsset).toLocaleString()}</h1>
@@ -44,7 +37,37 @@ export default function AssetProfile() {
             <div className="asset-profile-row-container right">
                 {dailyAssetChangeText}
             </div>
-            <div className='stock-profile-spacer-level2'></div>
+            <div style={{height:'40px'}}></div>
+            <div className="asset-profile-row-container left">
+                <PriceRow
+                    country='kr'
+                    name='예수금'
+                    currentValue ={'₩'+wonDeposit.toLocaleString()}
+                    change={'0'}
+                    changePercentage={0}></PriceRow>
+                <RankBox rank='3rd' ratio={14}></RankBox>
+            </div>
+            <div style={{height:'10px'}}></div>
+            <div className="asset-profile-row-container left">
+                <PriceRow
+                    country='kr'
+                    name='한국주식'
+                    currentValue ={'₩'+wonDeposit.toLocaleString()}
+                    change={'0'}
+                    changePercentage={0}></PriceRow>
+                <RankBox rank='1st' ratio={54}></RankBox>
+            </div>
+            <div style={{height:'10px'}}></div>
+            <div className="asset-profile-row-container left">
+                <PriceRow
+                    country='us'
+                    name='미국주식'
+                    currentValue ={'₩'+wonDeposit.toLocaleString()}
+                    change={'0'}
+                    changePercentage={0}></PriceRow>
+                <RankBox rank='2st' ratio={32}></RankBox>
+            </div>
+            <div style={{height:'40px'}}></div>
             <PeriodSelector></PeriodSelector>
             <div className="dollar-profile-row-container">
                 <LineGraph
@@ -53,14 +76,6 @@ export default function AssetProfile() {
                     color='#9AD8CD'></LineGraph>
             </div>
             {/* <div className='asset-profile-spacer-level2'></div> */}
-            <div style={{height:'30px'}}></div>
-            <div className="asset-profile-row-container">
-                <AssetBasicInfos
-                    yearlyHighest={totalAssetYealyHighest}
-                    yearlyLowest={totalAssetYealyLowest}
-                    unit={assetCurrency}></AssetBasicInfos>
-            </div>
-            <div style={{height:'30px'}}></div>
             <div className="asset-profile-row-container center">
                 <AssetChange 
                     change={assetYearlyChange} 
@@ -159,7 +174,7 @@ function AssetChange(props) {
         <div>
             <div className='asset-change-price-container'>
                 <div className='asset-change-price-text-container'>
-                    <span className='asset-change-price-text'>지난 1년 간</span>
+                    <span className='asset-change-price-text'>총 자산이 지난 1년 간</span>
                 </div>
             </div>
             <div className='asset-change-price-container'>
@@ -167,5 +182,14 @@ function AssetChange(props) {
             </div>
         </div>
         
+    )
+}
+
+function RankBox(props) {
+    return (
+        <div className='rank-box-container'>
+            <div className='rank-text-container'>{props.rank}</div>
+            <div className='ratio-text-container'>{props.ratio}%</div>
+        </div>
     )
 }

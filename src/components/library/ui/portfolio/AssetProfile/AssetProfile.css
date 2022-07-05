@@ -20,8 +20,7 @@
 }
 
 .asset-profile-subtitle {
-    font-weight: 500;
-    color: #B9B9B9;
+    color: #696969;
     margin: 0;
     text-align: right;
 }
@@ -143,6 +142,30 @@
     height: 50px;
 }
 
+.rank-box-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F8F8F8;
+}
+
+.rank-text-container {
+    font-size: 12px;
+    font-weight: 500;
+    color: #074B3F;
+    margin-top: 2px;
+    margin-left: 5px;
+    background: rgba(0,0,0,0);
+}
+
+.ratio-text-container {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
+    margin-left: 8px;
+    background: rgba(0,0,0,0);
+}
 
 @media (max-width: 1500px) {
     .asset-profile-spacer-level1 {
