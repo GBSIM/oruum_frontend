@@ -1,0 +1,26 @@
+.search-input-container {
+    padding-left: 15px;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    background: #F5F5F4;
+    border-radius: 100px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-input-icon {
+    height: 18px;
+    width: 18px;
+    flex-shrink: 0;
+    background: rgba(0,0,0,0);
+}
+
+.search-input {
+    background: rgba(0,0,0,0);
+    border: none;
+    width: 150px;
+    margin-left: 5px;
+    outline: none;
+}
