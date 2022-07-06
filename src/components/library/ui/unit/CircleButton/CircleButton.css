@@ -1,0 +1,18 @@
+.circle-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background: #F5F5F4;
+    flex-shrink: 0;
+}
+
+.circle-button:hover {
+    background: #DCDCDC;
+}
+
+.circle-button-image {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: rgba(0,0,0,0);
+}

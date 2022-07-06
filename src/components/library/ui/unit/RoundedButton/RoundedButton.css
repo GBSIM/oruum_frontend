@@ -1,0 +1,16 @@
+.rounded-button {
+    padding: 8px 16px 8px 16px;
+    background: #34B199;
+    border-radius: 100px;
+}
+
+.rounded-button:hover {
+    background: rgba(52, 177, 153, 0.8);
+}
+
+.rounded-button-text {
+    background: rgba(0,0,0,0);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
