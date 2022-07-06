@@ -1,0 +1,17 @@
+.mobile-footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100vw;
+    height: 60px;
+    border-top: 1px solid #DCDCDC;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 1200px) {
+    .mobile-footer {
+        display: none;
+    }
+    
+}

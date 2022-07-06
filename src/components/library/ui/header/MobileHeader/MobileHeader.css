@@ -1,0 +1,14 @@
+.mobile-header {
+    height: 50px;
+    width: 100vw;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+}
+
+@media (min-width: 600px) {
+    .mobile-header {
+        display: none;
+    }
+}

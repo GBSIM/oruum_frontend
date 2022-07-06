@@ -5,7 +5,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import HomePage from './components/views/HomePage/HomePage';
+import Home from './components/views/Home/Home';
 
 function App() {
   
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div>
         <Routes>  
-          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/" element={<Home/>} />
         </Routes>
       </div>
     </Router>

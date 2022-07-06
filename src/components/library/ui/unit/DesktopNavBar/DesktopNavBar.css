@@ -1,0 +1,48 @@
+.desktop-nav-button {
+    height: 60px;
+    width: 120px;
+    background: #fff;
+    flex-shrink: 0;
+    border-bottom: 3px solid #fff;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-nav-button.on {
+    border-bottom: 3px solid #34b199;
+}
+
+.desktop-nav-button-image-container {
+    height: 50px;
+    width: 110px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-nav-button-image-container:hover {
+    background: #F8F8F8;
+}
+
+.desktop-nav-button-image-container.on:hover {
+    background: #fff;
+}
+
+.desktop-nav-button-image {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: rgba(0,0,0,0);
+}
+
+.desktop-nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
