@@ -1,0 +1,15 @@
+.alarm-window {
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-shadow: 4px 4px 10px 0px rgba(220, 220, 220, 1);
+}
+
+.alarm-title {
+    margin: 15px 0px 0px 20px;
+    color: #333;
+}

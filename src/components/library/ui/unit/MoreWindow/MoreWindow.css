@@ -1,0 +1,10 @@
+.more-window {
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-shadow: 4px 4px 10px 0px rgba(220, 220, 220, 1);
+}
