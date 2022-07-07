@@ -5,6 +5,16 @@
     top: 0px;
     left: 0px;
     background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-header-logo {
+    margin-left: 20px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 @media (min-width: 600px) {

@@ -1,0 +1,17 @@
+.transparent-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    flex-shrink: 0;
+    background: rgba(0,0,0,0);
+}
+
+.transparent-button:hover {
+    background: #f3f3f3;
+}
+
+.transparent-button-icon {
+    height: 26px;
+    width: 26px;
+    background: rgba(0,0,0,0);
+}
