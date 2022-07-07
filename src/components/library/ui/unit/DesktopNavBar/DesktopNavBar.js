@@ -1,14 +1,18 @@
 import './DesktopNavBar.css';
 
 import { useSelector,useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
 import { changePage } from '../../../../../_reducers/nav';
 
 export default function DesktopNavBar() {
     const {page} = useSelector(state => state.nav);
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const changePageEvent = (nextPage) => {
         dispatch(changePage(nextPage));
+        navigate('/'+nextPage);
+        window.scrollTo(0,0);
     }
 
     return (

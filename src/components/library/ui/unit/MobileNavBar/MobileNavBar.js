@@ -1,14 +1,18 @@
 import './MobileNavBar.css';
 
 import { useSelector,useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
 import { changePage } from '../../../../../_reducers/nav';
 
 export default function MobileNavBar() {
     const {page} = useSelector(state => state.nav);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const changePageEvent = (nextPage) => {
         dispatch(changePage(nextPage));
+        navigate('/'+nextPage);
+        window.scrollTo(0,0);
     }
 
     return (
