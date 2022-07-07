@@ -1,0 +1,7 @@
+.mobile-search-window {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px - 60px);
+    border-top: 1px solid #DCDCDC;
+}

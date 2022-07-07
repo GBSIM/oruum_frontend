@@ -1,19 +1,20 @@
-import './SearchWindow.css';
+import './MobileSearchWindow.css';
 
 import { useSelector } from "react-redux";
 
-export default function SearchWindow() {
+export default function MobileSearchWindow() {
     const {searchWindowOn} = useSelector(state => state.window);
 
     if (searchWindowOn) {
         return (
-            <div className='search-window'>
-    
+            <div className='mobile-search-window'>
+                
             </div>
         )
     } else {
         return (
             <div></div>
         )
-    }   
+    }
+    
 }

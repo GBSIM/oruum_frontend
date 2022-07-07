@@ -1,0 +1,16 @@
+.mobile-search-input-container {
+    width: 250px;
+    height: 40px;
+    background: rgba(0,0,0,0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-search-input {
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,0);
+    color: #333;
+    padding-left: 10px;
+}
