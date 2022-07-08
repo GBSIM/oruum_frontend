@@ -1,0 +1,58 @@
+.price-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(0,0,0,0);
+    column-gap: 10px;
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    justify-content: flex-start;
+}
+
+.price-row:hover {
+    background: #fafafa;
+}
+
+.price-row-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    background: rgba(0,0,0,0);
+}
+
+.price-row-name {
+    color: #696969;
+    margin: 0;
+}
+
+.price-row-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.price-row-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price-row-price {
+    color: #333;
+    margin: 0;
+}
+
+.price-row-price-change {
+    margin: 0;
+}
+
+
+.price-row-price-change.plus {
+    color: #34B199;
+}
+
+.price-row-price-change.minus {
+    color: #F15E5E;
+}
+

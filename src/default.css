@@ -2,7 +2,7 @@
 
 * {
 	font-family: 'Noto Sans KR', sans-serif;
-	background: #fff;
+	background: rgba(0,0,0,0);
 }
 html {
 	font-family: 'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', NanumGothic, 'Malgun Gothic', sans-serif;
@@ -112,6 +112,7 @@ span {
 	border: 1px solid rgba(245, 245, 244, 1);
 	box-shadow: 0px 3px 5px 0px rgba(248, 248, 248, 1);
 	padding-bottom: 50px;
+	border-radius: 10px;
 }
 
 .content-box-title {
