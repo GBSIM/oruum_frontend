@@ -2,7 +2,7 @@ import './Gainer.css';
 
 import { useSelector,useDispatch } from "react-redux";
 
-import { activateGainerKorea, activateGainerUS } from '../../../../../_reducers/home';
+import { changeGainerCountry } from '../../../../../_reducers/home';
 
 import CountrySelector from '../../unit/CountrySelector/CountrySelector';
 import PriceRow from '../../unit/PriceRow/PriceRow';
@@ -10,11 +10,8 @@ import PriceRow from '../../unit/PriceRow/PriceRow';
 export default function Gainer() {
     const {isGainerKorea,gainersKorea,gainersUS} = useSelector(state => state.home);
     const dispatch = useDispatch();
-    const changeCountryToKorea = (nextPage) => {
-        dispatch(activateGainerKorea());
-    }
-    const changeCountryToUS = (nextPage) => {
-        dispatch(activateGainerUS());
+    const changeGainerCountryEvent = () => {
+        dispatch(changeGainerCountry());
     }
 
     let GainerList;
@@ -47,8 +44,7 @@ export default function Gainer() {
             <h2 className='content-box-title'>오늘 최고의 상승세</h2>
             <CountrySelector
                 isKorea={isGainerKorea}
-                activateKorea={changeCountryToKorea}
-                activateUS={changeCountryToUS}></CountrySelector>
+                changeCountry={changeGainerCountryEvent}></CountrySelector>
             <div style={{height:'5px'}}></div>
             {GainerList}
         </div>

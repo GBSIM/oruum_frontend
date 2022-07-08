@@ -1,8 +1,9 @@
-export const ACTIVATE_GAINER_KOREA = "HOME/ACTIVATE_GAINER_KOREA"
-export const ACTIVATE_GAINER_US = "HOME/ACTIVATE_GAINER_US"
+export const CHANGE_GAINER_COUNTRY = "HOME/CHANGE_GAINER_COUNTRY";
+export const CHANGE_LOSER_COUNTRY = "HOME/CHANGE_LOSER_COUNTRY";
 
-export const activateGainerKorea = () => ({type:ACTIVATE_GAINER_KOREA})
-export const activateGainerUS = () => ({type:ACTIVATE_GAINER_US})
+export const changeGainerCountry = () => ({type:CHANGE_GAINER_COUNTRY});
+export const changeLoserCountry = () => ({type:CHANGE_LOSER_COUNTRY});
+
 
 const initialState = {
     marketKorea: [
@@ -29,20 +30,35 @@ const initialState = {
         {"name":"애플","price":146.35,"change":3.43,"changePercentage":2.40,"unit":"$"},
         {"name":"애플","price":146.35,"change":3.43,"changePercentage":2.40,"unit":"$"},        
     ],
+    isLoserKorea: true,
+    losersKorea: [
+        {"name":"삼성전자","price":58700,"change":-500,"changePercentage":-0.86,"unit":"원"},
+        {"name":"삼성전자","price":58700,"change":-500,"changePercentage":-0.86,"unit":"원"},
+        {"name":"삼성전자","price":58700,"change":-500,"changePercentage":-0.86,"unit":"원"},
+        {"name":"삼성전자","price":58700,"change":-500,"changePercentage":-0.86,"unit":"원"},
+        {"name":"삼성전자","price":58700,"change":-500,"changePercentage":-0.86,"unit":"원"},
+    ],
+    losersUS: [
+        {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},
+        {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},
+        {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},
+        {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},
+        {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},        
+    ],
     
 }
 
 const home = (state = initialState, action) => {
     switch (action.type) {
-        case ACTIVATE_GAINER_KOREA:
+        case CHANGE_GAINER_COUNTRY:
             return {
                 ...state,
-                isGainerKorea: true,
+                isGainerKorea: !state.isGainerKorea,
             }
-        case ACTIVATE_GAINER_US:
+        case CHANGE_LOSER_COUNTRY:
             return {
                 ...state,
-                isGainerKorea: false,
+                isLoserKorea: !state.isLoserKorea,
             }
         default:
             return state;

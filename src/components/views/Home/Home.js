@@ -10,6 +10,7 @@ import MobileFooter from '../../library/ui/footer/MobileFooter/MobileFooter';
 
 import TodayMarket from '../../library/ui/home/TodayMarket/TodayMarket';
 import Gainer from '../../library/ui/home/Gainer/Gainer';
+import Loser from '../../library/ui/home/Loser/Loser';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -27,6 +28,9 @@ export default function Home() {
                 </div>
                 <div className='content-box'>
                     <Gainer></Gainer>
+                </div>
+                <div className='content-box'>
+                    <Loser></Loser>
                 </div>
             </div>
             <MobileFooter></MobileFooter>
