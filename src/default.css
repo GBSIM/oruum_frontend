@@ -107,7 +107,7 @@ span {
 }
 
 .content-box {
-	width: 500px;
+	width: min(500px, 100%);
 	background: rgba(0,0,0,0);
 	border: 1px solid rgba(245, 245, 244, 1);
 	box-shadow: 0px 3px 5px 0px rgba(248, 248, 248, 1);
@@ -120,4 +120,17 @@ span {
 	margin: 0;
 	margin-left: 20px;
 	margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+	.content-box {
+		border-radius: 0px;
+		box-shadow: none;
+	}
+	.content-box.top {
+		border-top: none;
+	}
+	.main-contents {
+		padding-top: 0px;
+	}
 }

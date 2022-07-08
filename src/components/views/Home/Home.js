@@ -21,7 +21,7 @@ export default function Home() {
             <DesktopHeader></DesktopHeader>
             <MobileHeader></MobileHeader>
             <div className='main-contents' onClick={closeAllWindowsEvent}>
-                <div className='content-box'>
+                <div className='content-box top'>
                     <TodayMarket></TodayMarket>
                 </div>
             </div>
