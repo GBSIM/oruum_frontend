@@ -9,6 +9,7 @@ import MobileHeader from '../../library/ui/header/MobileHeader/MobileHeader';
 import MobileFooter from '../../library/ui/footer/MobileFooter/MobileFooter';
 
 import TodayMarket from '../../library/ui/home/TodayMarket/TodayMarket';
+import Gainer from '../../library/ui/home/Gainer/Gainer';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -23,6 +24,9 @@ export default function Home() {
             <div className='main-contents' onClick={closeAllWindowsEvent}>
                 <div className='content-box top'>
                     <TodayMarket></TodayMarket>
+                </div>
+                <div className='content-box'>
+                    <Gainer></Gainer>
                 </div>
             </div>
             <MobileFooter></MobileFooter>

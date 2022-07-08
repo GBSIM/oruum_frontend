@@ -101,6 +101,7 @@ span {
 	min-height: 1000px;
 	display: flex;
 	flex-direction: column;
+	row-gap: 20px;
 	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 100px;
@@ -126,6 +127,9 @@ span {
 	.content-box {
 		border-radius: 0px;
 		box-shadow: none;
+		border: 1px solid #DCDCDC;
+		border-left: none;
+		border-right: none;
 	}
 	.content-box.top {
 		border-top: none;

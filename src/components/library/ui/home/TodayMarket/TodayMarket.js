@@ -1,6 +1,6 @@
 import './TodayMarket.css'
 
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import PriceRow from '../../unit/PriceRow/PriceRow'
 
@@ -13,7 +13,8 @@ export default function TodayMarket() {
             name={marketInfo["name"]}
             price={marketInfo["price"]}
             change={marketInfo["change"]}
-            changePercentage={marketInfo["changePercentage"]}></PriceRow>
+            changePercentage={marketInfo["changePercentage"]}
+            key={'market-index-korea'+String(index)}></PriceRow>
     ))
     const PriceRowListUs = marketUS.map((marketInfo,index) => (
         <PriceRow
@@ -21,7 +22,8 @@ export default function TodayMarket() {
             name={marketInfo["name"]}
             price={marketInfo["price"]}
             change={marketInfo["change"]}
-            changePercentage={marketInfo["changePercentage"]}></PriceRow>
+            changePercentage={marketInfo["changePercentage"]}
+            key={'market-index-us'+String(index)}></PriceRow>
     ))
 
     return (
