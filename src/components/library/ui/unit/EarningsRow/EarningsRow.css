@@ -1,0 +1,59 @@
+.earnings-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    padding: 5px 20px 5px 20px;
+}
+
+.earnings-row:hover {
+    background: #fafafa;
+}
+
+.earnings-row-image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.earnings-row-name {
+    color: #333;
+}
+
+.earnings-row-ticker {
+    color: #B9B9B9;
+}
+
+.earnings-row-value-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.earnings-row-value-title {
+    color: #B9B9B9;
+}
+
+.earnings-row-value-estimates {
+    color: #333;
+}
+
+.earnings-row-value-divider {
+    width: 1px;
+    height: 16px;
+    background: #333;
+}
+
+.earnings-row-value-real{
+    color: #34B199
+}
+
+.earnings-row-value-real.bull {
+    color: #34B199;
+}
+
+.earnings-row-value-real.bear {
+    color: #F15E5E;
+}

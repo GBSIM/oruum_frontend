@@ -1,8 +1,10 @@
 export const CHANGE_GAINER_COUNTRY = "HOME/CHANGE_GAINER_COUNTRY";
 export const CHANGE_LOSER_COUNTRY = "HOME/CHANGE_LOSER_COUNTRY";
+export const CHANGE_EARNINGS_CALENDAR_COUNTRY = "HOME/CHANGE_EARNINGS_CALENDAR_COUNTRY";
 
 export const changeGainerCountry = () => ({type:CHANGE_GAINER_COUNTRY});
 export const changeLoserCountry = () => ({type:CHANGE_LOSER_COUNTRY});
+export const changeEarningsCalendarCountry = () => ({type:CHANGE_EARNINGS_CALENDAR_COUNTRY});
 
 
 const initialState = {
@@ -45,6 +47,7 @@ const initialState = {
         {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},
         {"name":"애플","price":146.35,"change":-3.43,"changePercentage":-2.40,"unit":"$"},        
     ],
+    isEarningsCalendarKorea: true,
     
 }
 
@@ -59,6 +62,11 @@ const home = (state = initialState, action) => {
             return {
                 ...state,
                 isLoserKorea: !state.isLoserKorea,
+            }
+        case CHANGE_EARNINGS_CALENDAR_COUNTRY:
+            return {
+                ...state,
+                isEarningsCalendarKorea: !state.isEarningsCalendarKorea,
             }
         default:
             return state;
