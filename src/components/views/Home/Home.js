@@ -12,6 +12,7 @@ import TodayMarket from '../../library/ui/home/TodayMarket/TodayMarket';
 import Gainer from '../../library/ui/home/Gainer/Gainer';
 import Loser from '../../library/ui/home/Loser/Loser';
 import EarningsCalendar from '../../library/ui/home/EarningsCalendar/EarningsCalendar';
+import SubHome from '../../library/ui/subcontents/SubHome/SubHome';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -38,6 +39,9 @@ export default function Home() {
                 </div>
             </div>
             <MobileFooter></MobileFooter>
+            <div className='sub-contents-right'>
+                <SubHome></SubHome>
+            </div>
         </div>
     )
 }

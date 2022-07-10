@@ -22,6 +22,9 @@ export default function Stock() {
 
             </div>
             <MobileFooter></MobileFooter>
+            <div className='sub-contents-right'>
+                
+            </div>
         </div>
     )
 }

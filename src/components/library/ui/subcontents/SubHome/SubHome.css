@@ -1,0 +1,21 @@
+.subhome-asset-title {
+    color: #696969;
+}
+
+.subhome-total-asset {
+    color: #333333;
+    margin: 0px;
+}
+
+.subhome-total-asset-change {
+    font-weight: 500;
+    color: #696969;
+}
+
+.subhome-total-asset-change.plus {
+    color: #34B199;
+}
+
+.subhome-total-asset-change.minus {
+    color: #F15E5E;
+}

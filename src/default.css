@@ -123,6 +123,41 @@ span {
 	margin-top: 15px;
 }
 
+.sub-contents-right {
+	position: fixed;
+	top: 80px;
+	right: calc(50% - 250px - 360px - (50% - 250px - 360px) / 2);
+	width: 360px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-center-align {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.subcontents-profile-image {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.subcontents-profile-name {
+	margin: 0;
+	color: #696969;
+}
+
+@media (max-width: 1300px) {
+	.sub-contents-right {
+		display: none;
+	}
+}
+
 @media (max-width: 600px) {
 	.content-box {
 		border-radius: 0px;
@@ -140,4 +175,5 @@ span {
 	span {
 		font-size: 14px;
 	}
+	
 }
