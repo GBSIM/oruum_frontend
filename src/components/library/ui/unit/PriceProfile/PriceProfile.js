@@ -1,7 +1,7 @@
 import './PriceProfile.css';
 
 import LineGraph from '../LineGraph/LineGraph';
-import { Line } from 'react-chartjs-2';
+import PeriodSelector from '../PeriodSelector/PeriodSelector';
 
 export default function PriceProfile(props) {
     let Change;
@@ -14,7 +14,8 @@ export default function PriceProfile(props) {
     const SummaryList = props.summaryTitleList.map((summaryTitle,index) => (
         <Summary
             title={summaryTitle}
-            value={props.summaryValueList[index].toLocaleString()}></Summary>
+            value={props.summaryValueList[index].toLocaleString()}
+            key={index}></Summary>
     ))
 
     return (
@@ -24,19 +25,26 @@ export default function PriceProfile(props) {
                 <h2 className='price-profile-name'>{props.name}</h2>
             </div>
             <div className='container-center-align'>
-                <h3 className='price-profile-subname'>{props.subname}</h3>
+                <span className='price-profile-subname'>{props.subname}</span>
             </div>
             <div style={{height:'20px'}}></div>
             <div className='container-center-align'>
                 <img className='price-profile-image'
                      src={props.image}></img>
             </div>
-            <div style={{height:'60px'}}></div>
+            <div style={{height:'40px'}}></div>
             <div className='container-center-align'>
                 <h1 className='price-profile-price'>{props.unit}{props.price.toLocaleString()}</h1>
             </div>
             <div className='container-center-align'>
                 {Change}
+            </div>
+            <div style={{height:'20px'}}></div>
+            <div className='container-center-align' style={{paddingLeft:'10px',paddingRight:'10px'}}>
+                <PeriodSelector
+                    periodList={props.periodList}
+                    selectedPeriod={props.selectedPeriod}
+                    clickEvent={props.clickEvent}></PeriodSelector>
             </div>
             <div className='container-center-align'>
                 <LineGraph

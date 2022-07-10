@@ -1,3 +1,6 @@
+export const CHANGE_PLOT_PERIOD = "STOCK/CHANGE_PLOT_PERIOD"
+
+export const changePlotPeriod = (period) => ({type:CHANGE_PLOT_PERIOD, plotPeriod:period})
 
 const initialState = {
     koreanName: "테슬라",
@@ -27,11 +30,19 @@ const initialState = {
     yearHigh: 1243.49,
     yearLow: 620.57,
     PER: 96.70,
+    plotPeriod:'1년',
+    plotPeriodList:['1주','1달','6달','1년','5년'],
+
 
 }
 
 const stock = (state = initialState, action) => {
     switch (action.type) {
+        case CHANGE_PLOT_PERIOD:
+            return {
+                ...state,
+                plotPeriod: action.plotPeriod
+            }
         default:
             return state;
     }

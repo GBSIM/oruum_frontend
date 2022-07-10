@@ -1,0 +1,23 @@
+.period-selector {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.period-button {
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.period-button.off {
+    color: #B9B9B9;
+    background: #fff;
+}
+
+.period-button.on {
+    color: #fff;
+    background: #34B199;
+}

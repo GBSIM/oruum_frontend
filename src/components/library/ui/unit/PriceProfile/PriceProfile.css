@@ -11,11 +11,12 @@
 .price-profile-subname {
     margin: 0px;
     color: #B9B9B9;
+    font-weight: 500;
 }
 
 .price-profile-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     flex-shrink: 0;
     object-fit: cover;
 }
