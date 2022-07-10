@@ -1,0 +1,47 @@
+.price-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-profile-name {
+    margin: 0px;
+    color: #333;
+}
+
+.price-profile-subname {
+    margin: 0px;
+    color: #B9B9B9;
+}
+
+.price-profile-image {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.price-profile-price {
+    margin: 0;
+    color: #333;
+}
+
+.price-profile-change {
+    margin: 0;
+}
+
+.price-profile-change.plus {
+    color: #34B199;
+}
+
+.price-profile-change.minus {
+    color: #F15E5E;
+}
+
+.summary-title {
+    color: #B9B9B9;
+}
+
+.summary-value {
+    color: #333;
+    margin: 0;
+}
