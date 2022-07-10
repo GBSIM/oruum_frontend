@@ -7,6 +7,7 @@ import { closeAllWindows } from '../../../_reducers/window';
 import DesktopHeader from '../../library/ui/header/DesktopHeader/DesktopHeader';
 import MobileHeader from '../../library/ui/header/MobileHeader/MobileHeader';
 import MobileFooter from '../../library/ui/footer/MobileFooter/MobileFooter';
+import DollarProfile from '../../library/ui/economy/DollarProfile/DollarProfile';
 
 export default function Economy() {
     const dispatch = useDispatch();
@@ -19,7 +20,9 @@ export default function Economy() {
             <DesktopHeader></DesktopHeader>
             <MobileHeader></MobileHeader>
             <div className='main-contents' onClick={closeAllWindowsEvent}>
-
+                <div className='content-box top'>
+                    <DollarProfile></DollarProfile>
+                </div>
             </div>
             <MobileFooter></MobileFooter>
         </div>

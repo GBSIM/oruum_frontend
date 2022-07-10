@@ -5,9 +5,10 @@ import window from "./window";
 import home from "./home";
 import user from "./user";
 import stock from "./stock";
+import economy from "./economy";
 
 const rootReducer = combineReducers({
-    nav, window, home, user, stock
+    nav, window, home, user, stock, economy
 });
 
 export default rootReducer;
