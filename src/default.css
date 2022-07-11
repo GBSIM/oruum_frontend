@@ -158,6 +158,22 @@ span {
 	}
 }
 
+@media (max-width: 1024px) {
+	h1 {
+		font-size: 26px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	span {
+		font-size: 16px;
+	}
+	
+}
+
 @media (max-width: 600px) {
 	.content-box {
 		border-radius: 0px;
@@ -171,6 +187,27 @@ span {
 	}
 	.main-contents {
 		padding-top: 0px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	span {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 18px;
 	}
 	span {
 		font-size: 14px;
