@@ -8,6 +8,7 @@ import DesktopHeader from '../../library/ui/header/DesktopHeader/DesktopHeader';
 import MobileHeader from '../../library/ui/header/MobileHeader/MobileHeader';
 import MobileFooter from '../../library/ui/footer/MobileFooter/MobileFooter';
 import StockProfile from '../../library/ui/stock/StockProfile/StockProfile';
+import StockCheckPoint from '../../library/ui/stock/StockCheckPoint/StockCheckPoint';
 
 export default function Stock() {
     const dispatch = useDispatch();
@@ -22,8 +23,8 @@ export default function Stock() {
                 <div className='content-box top'>
                     <StockProfile></StockProfile>
                 </div>
-                <div className='content-box top'>
-                    <StockProfile></StockProfile>
+                <div className='content-box'>
+                    <StockCheckPoint></StockCheckPoint>
                 </div>
             </div>
             <MobileFooter></MobileFooter>
