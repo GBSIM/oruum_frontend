@@ -18,7 +18,9 @@ export default function EarningsCalendar() {
     return (
         <div className='earnings-calendar'>
             <h2 className='content-box-title'>실적발표 캘린더</h2>
-            <Calendar></Calendar>
+            <div style={{paddingLeft:'20px',paddingRight:'20px'}}>
+                <Calendar></Calendar>
+            </div>
             <CountrySelector
                 isKorea={isEarningsCalendarKorea}
                 changeCountry={changeEarningsCalendarCountryEvent}></CountrySelector>
