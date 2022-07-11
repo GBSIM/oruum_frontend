@@ -20,14 +20,41 @@ function App() {
   const currentPath = window.location.pathname;
   const dispatch = useDispatch();
   const history = createBrowserHistory();
+  
+  useEffect(() => {
+    const listenBackEvent = () => {
+      if (currentPath === "/") {
+        dispatch(changePage('home'));
+      } else if (currentPath === "/stock") {
+        dispatch(changePage('stock'));
+      } else if (currentPath === "/economy") {
+        dispatch(changePage('economy'));
+      } else if (currentPath === "/asset") {
+        dispatch(changePage('asset'));
+      } else if (currentPath === "/home") {
+        dispatch(changePage('home'));
+      }
+    };
 
-  if (currentPath === "/Home") {
+    const unlistenHistoryEvent = history.listen(({ action }) => {
+      if (action === "POP") {
+        listenBackEvent();
+      }
+    });
+
+    return unlistenHistoryEvent;
+  }, [
+  // effect에서 사용하는 state를 추가
+  ]);
+
+
+  if (currentPath === "/home") {
     dispatch(changePage('home'));
-  } else if (currentPath === "/Stock") {
+  } else if (currentPath === "/stock") {
     dispatch(changePage('stock'));
-  } else if (currentPath === "/Economy") {
+  } else if (currentPath === "/economy") {
     dispatch(changePage('economy'));
-  } else if (currentPath === "/Asset") {
+  } else if (currentPath === "/asset") {
     dispatch(changePage('asset'));
   } else {
     dispatch(changePage('home'));
