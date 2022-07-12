@@ -189,6 +189,7 @@ span {
 		border: 1px solid #DCDCDC;
 		border-left: none;
 		border-right: none;
+		width: 100%;
 	}
 	.content-box.top {
 		border-top: none;
