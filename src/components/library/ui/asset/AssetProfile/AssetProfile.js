@@ -57,7 +57,7 @@ export default function AssetProfile() {
                     unit='원'></PriceRow>
             </div>
             <div style={{height:'40px'}}></div>
-            <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around'}}>
+            <div style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-around',padding:'0 20px 0 20px'}}>
                 <PercentageSummary
                     title='예수금'
                     percentage={cashPecentage}
