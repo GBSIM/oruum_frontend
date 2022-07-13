@@ -28,7 +28,7 @@ const window = (state = initialState, action) => {
             return {
                 ...state,
                 searchWindowOn: false,
-                alarmWindowOn: true,
+                alarmWindowOn: !state.alarmWindowOn,
                 moreWindowOn: false,
             }
         case OPEN_MORE_WINDOW:
@@ -36,7 +36,7 @@ const window = (state = initialState, action) => {
                 ...state,
                 searchWindowOn: false,
                 alarmWindowOn: false,
-                moreWindowOn: true,
+                moreWindowOn: !state.moreWindowOn,
             }
         case CLOSE_ALL_WINDOWS:
             return {

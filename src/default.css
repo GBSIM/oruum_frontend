@@ -131,6 +131,7 @@ span {
 	background: #fff;
 	display: flex;
 	flex-direction: column;
+	z-index: 0;
 }
 
 .container-center-align {

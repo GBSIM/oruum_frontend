@@ -39,9 +39,9 @@ export default function Home() {
                 </div>
             </div>
             <MobileFooter></MobileFooter>
-            <div className='sub-contents-right'>
+            {/* <div className='sub-contents-right' onClick={closeAllWindowsEvent}>
                 <SubHome></SubHome>
-            </div>
+            </div> */}
         </div>
     )
 }
