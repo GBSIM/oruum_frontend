@@ -7,9 +7,10 @@ import { openAlarmWindow, openMoreWindow, openSearchWindow, closeAllWindows } fr
 import TransparentButton from '../../unit/TransparentButton/TransparentButton';
 import MobileSearchWindow from '../../unit/MobileSearchWindow/MobileSearchWindow';
 import MobileSearchInput from '../../unit/MobileSearchInput/MobileSearchInput';
+import MobileAlarmWindow from '../../unit/MobileAlarmWindow/MobileAlarmWindow';
 
 export default function MobileHeader() {
-    const {searchWindowOn} = useSelector(state => state.window);
+    const {searchWindowOn, alarmWindowOn} = useSelector(state => state.window);
 
     const dispatch = useDispatch();
     const openMoreWindowEvent = () => {
@@ -37,6 +38,16 @@ export default function MobileHeader() {
                 <MobileSearchWindow></MobileSearchWindow>
             </div>
         )
+    } else if (alarmWindowOn) {
+        return (
+            <div className='mobile-header'>
+                <div style={{width:'10px'}}></div>
+                <TransparentButton
+                    image={require('../../icons/icon_back_dark_grey.png')}
+                    clickEvent={closeAllWindowsEvent}></TransparentButton>
+                <MobileAlarmWindow></MobileAlarmWindow>
+            </div>
+        )
     } else {
         return (
             <div className='mobile-header'>
@@ -48,7 +59,8 @@ export default function MobileHeader() {
                     image={require('../../icons/icon_search_dark_grey.png')}
                     clickEvent={openSearchWindowEvent}></TransparentButton>
                 <TransparentButton
-                    image={require('../../icons/icon_notification_dark_grey.png')}></TransparentButton>
+                    image={require('../../icons/icon_notification_dark_grey.png')}
+                    clickEvent={openAlarmWindowEvent}></TransparentButton>
                 <TransparentButton
                     image={require('../../icons/icon_more_dark_grey.png')}></TransparentButton>
                 <div style={{width:'10px'}}></div>

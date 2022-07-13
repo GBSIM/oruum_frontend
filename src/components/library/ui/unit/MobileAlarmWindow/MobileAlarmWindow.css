@@ -1,0 +1,12 @@
+.mobile-alarm-window {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #fff;
+}
+
+.mobile-alarm-title {
+    margin: 0;
+    margin-left: 20px;
+}
