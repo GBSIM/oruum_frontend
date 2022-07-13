@@ -22,14 +22,14 @@ export default function DollarProfile() {
     if (dollar5YearChange >= 0) {
         Change = 
         <div style={{display:'flex',flexDirection:'row',alignItems:'baseline'}}>
-            <h2 className='dollar-profile-below-value'>{dollar5YearChange.toFixed(2)}</h2>
-            <span className='dollar-profile-below-text'>만큼 높아요.</span>
+            <h2 className='dollar-profile-below-value'>{dollar5YearChange.toFixed(2)}원</h2>
+            <span className='dollar-profile-below-text'>&nbsp; 높아요.</span>
         </div>
     } else {
         Change = 
         <div style={{diplay:'flex',fleDirection:'row',alignItems:'baseline'}}>
             <h2 className='dollar-profile-below-value'>{dollar5YearChange}</h2>
-            <span className='dollar-profile-below-text'>낮아요.</span>
+            <span className='dollar-profile-below-text'>&nbsp;만큼 낮아요.</span>
         </div>
     }
 
@@ -38,6 +38,7 @@ export default function DollarProfile() {
             <PriceProfile
                 name='달러환율'
                 subname='USD/KRW'
+                unit='원'
                 image={require('../../icons/icon_dollar_bright_yellow.png')}
                 price={dollarClose}
                 change={dollarChange}

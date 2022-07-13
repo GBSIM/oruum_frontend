@@ -18,6 +18,13 @@ export default function PriceProfile(props) {
             key={index}></Summary>
     ))
 
+    let Price;
+    if ((props.unit === '$') || (props.unit === '달러') || (props.unit === 'dollar')) {
+        Price = <h1 className='price-profile-price'>{props.unit}{props.price.toLocaleString()}</h1>
+    } else {
+        Price = <h1 className='price-profile-price'>{props.price.toLocaleString()}{props.unit}</h1>
+    }
+
     return (
         <div className='price-profile'>
             <div style={{height:'20px'}}></div>
@@ -34,7 +41,7 @@ export default function PriceProfile(props) {
             </div>
             <div style={{height:'40px'}}></div>
             <div className='container-center-align'>
-                <h1 className='price-profile-price'>{props.unit}{props.price.toLocaleString()}</h1>
+                {Price}
             </div>
             <div className='container-center-align'>
                 {Change}
