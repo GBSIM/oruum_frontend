@@ -1,4 +1,4 @@
 # oruum_frontend
-투자 자산 관리 웹 오름의 프론트엔드 서버입니다.
+This is repository of frontend server code for oruum.com.
 
-리액트를 기반으로 만들었습니다.
+We build frontend server code using React.
