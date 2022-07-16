@@ -17,6 +17,7 @@ import SubHome from '../../library/ui/subcontents/SubHome/SubHome';
 import { switchLoginStatusTrue, setProfile } from '../../../_reducers/user';
 
 export default function Home() {
+    const {isLogin} = useSelector(state => state.user);
     const dispatch = useDispatch();
     const closeAllWindowsEvent = () => {
         dispatch(closeAllWindows());
@@ -29,6 +30,17 @@ export default function Home() {
     if (code != null) {
         KakaoRedirectHandler();
     }
+
+    let SubContents;
+    if (isLogin) {
+        SubContents = 
+            <div className='sub-contents-right' onClick={closeAllWindowsEvent}>
+                <SubHome></SubHome>
+            </div>
+    } else {
+        SubContents = <div></div>
+    }
+
 
     return (
         <div className='page'>
@@ -49,9 +61,7 @@ export default function Home() {
                 </div> */}
             </div>
             <MobileFooter></MobileFooter>
-            {/* <div className='sub-contents-right' onClick={closeAllWindowsEvent}>
-                <SubHome></SubHome>
-            </div> */}
+            {SubContents}
         </div>
     )
 }
