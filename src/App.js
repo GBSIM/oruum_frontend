@@ -60,6 +60,8 @@ function App() {
     dispatch(changePage('home'));
   }
 
+  
+
   return (
     <Router>
       <div>

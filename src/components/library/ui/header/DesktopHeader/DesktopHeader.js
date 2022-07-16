@@ -11,6 +11,7 @@ import RoundedButton from '../../unit/RoundedButton/RoundedButton';
 import SearchWindow from '../../unit/SearchWindow/SearchWindow';
 import AlarmWindow from '../../unit/AlarmWindow/AlarmWindow';
 import MoreWindow from '../../unit/MoreWindow/MoreWindow';
+import KakaoLogin from '../../account/KakaoLogin';
 
 export default function DesktopHeader() {
     const {searchWindowOn} = useSelector(state => state.window);
@@ -54,9 +55,11 @@ export default function DesktopHeader() {
                 <CircleButton
                     image={require('../../icons/icon_more_dark_grey.png')}
                     clickEvent={openMoreWindowEvent}></CircleButton>
-                <RoundedButton
-                    text='로그인'></RoundedButton>
+                {/* <RoundedButton
+                    text='로그인'></RoundedButton> */}
+                <KakaoLogin></KakaoLogin>
                 <div style={{width:'20px'}}></div>
+                
             </div> 
             <SearchWindow></SearchWindow>
             <AlarmWindow></AlarmWindow>
