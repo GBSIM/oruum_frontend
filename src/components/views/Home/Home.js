@@ -2,7 +2,6 @@ import './Home.css';
 
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { closeAllWindows } from '../../../_reducers/window';
 
@@ -22,8 +21,6 @@ export default function Home() {
     const closeAllWindowsEvent = () => {
         dispatch(closeAllWindows());
     }
-
-    const {isLogin} = useSelector(state => state.user);
 
     const href = window.location.href;
     let params = new URL(href).searchParams;
@@ -61,7 +58,6 @@ export default function Home() {
 
 const KakaoRedirectHandler = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     useEffect(()=> {
       let params = new URL(document.location.toString()).searchParams;
       let code = params.get("code");
@@ -87,7 +83,6 @@ const KakaoRedirectHandler = () => {
             dispatch(setProfile(data.properties.nickname,data.properties.thumbnail_image));
         })
         dispatch(switchLoginStatusTrue());
-        navigate('/home');
     })
     }, [])
   };
