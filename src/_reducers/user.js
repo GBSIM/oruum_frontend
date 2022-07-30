@@ -10,6 +10,7 @@ const initialState = {
     isLogin: false,
     name: "",
     imageUrl:"",
+    alarmList: [],
     totalAsset: 100000000,
     totalAssetChange: 3210000,
     totalAssetChangePercentage: 3.21,
