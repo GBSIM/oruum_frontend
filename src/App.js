@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { createBrowserHistory } from "history";
 
 import { changePage } from './_reducers/nav';
+import { closeAllWindows } from './_reducers/window';
 
 import Home from './components/views/Home/Home';
 import Stock from './components/views/Stock/Stock';
@@ -21,19 +22,25 @@ function App() {
   const dispatch = useDispatch();
   const history = createBrowserHistory();
 
+  const {moreWindowOn, searchWindowOn, alarmWindowOn} = useSelector(state => state.window);
+
   window.onpopstate = function(event) {
-    console.log("뒤로가기");
-    if (window.location.pathname === "/") {
-      dispatch(changePage('home'));
-    } else if (window.location.pathname === "/stock") {
-      dispatch(changePage('stock'));
-    } else if (window.location.pathname === "/economy") {
-      dispatch(changePage('economy'));
-    } else if (window.location.pathname === "/asset") {
-      dispatch(changePage('asset'));
-    } else if (window.location.pathname === "/home") {
-      dispatch(changePage('home'));
-    }
+    if (moreWindowOn || searchWindowOn || alarmWindowOn) {
+      dispatch(closeAllWindows());
+    } else {
+      console.log("뒤로가기");
+      if (window.location.pathname === "/") {
+        dispatch(changePage('home'));
+      } else if (window.location.pathname === "/stock") {
+        dispatch(changePage('stock'));
+      } else if (window.location.pathname === "/economy") {
+        dispatch(changePage('economy'));
+      } else if (window.location.pathname === "/asset") {
+        dispatch(changePage('asset'));
+      } else if (window.location.pathname === "/home") {
+        dispatch(changePage('home'));
+      }
+    }    
   }
   
   if (window.location.pathname === "/home") {
