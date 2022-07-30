@@ -20,48 +20,34 @@ function App() {
   const currentPath = window.location.pathname;
   const dispatch = useDispatch();
   const history = createBrowserHistory();
+
+  window.onpopstate = function(event) {
+    console.log("뒤로가기");
+    if (window.location.pathname === "/") {
+      dispatch(changePage('home'));
+    } else if (window.location.pathname === "/stock") {
+      dispatch(changePage('stock'));
+    } else if (window.location.pathname === "/economy") {
+      dispatch(changePage('economy'));
+    } else if (window.location.pathname === "/asset") {
+      dispatch(changePage('asset'));
+    } else if (window.location.pathname === "/home") {
+      dispatch(changePage('home'));
+    }
+  }
   
-  useEffect(() => {
-    const listenBackEvent = () => {
-      if (currentPath === "/") {
-        dispatch(changePage('home'));
-      } else if (currentPath === "/stock") {
-        dispatch(changePage('stock'));
-      } else if (currentPath === "/economy") {
-        dispatch(changePage('economy'));
-      } else if (currentPath === "/asset") {
-        dispatch(changePage('asset'));
-      } else if (currentPath === "/home") {
-        dispatch(changePage('home'));
-      }
-    };
-
-    const unlistenHistoryEvent = history.listen(({ action }) => {
-      if (action === "POP") {
-        listenBackEvent();
-      }
-    });
-
-    return unlistenHistoryEvent;
-  }, [
-  // effect에서 사용하는 state를 추가
-  ]);
-
-
-  if (currentPath === "/home") {
+  if (window.location.pathname === "/home") {
     dispatch(changePage('home'));
-  } else if (currentPath === "/stock") {
+  } else if (window.location.pathname === "/stock") {
     dispatch(changePage('stock'));
-  } else if (currentPath === "/economy") {
+  } else if (window.location.pathname === "/economy") {
     dispatch(changePage('economy'));
-  } else if (currentPath === "/asset") {
+  } else if (window.location.pathname === "/asset") {
     dispatch(changePage('asset'));
   } else {
     dispatch(changePage('home'));
   }
-
   
-
   return (
     <Router>
       <div>
