@@ -4,9 +4,26 @@
     width: 100%;
     height: calc(100vh - 50px);
     background: #fff;
+    padding: 0px 20px 50px 20px;
+}
+
+.mobile-alarm-row {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.mobile-alarm-date {
+    font-size: 14px;
+    color: #B9B9B9;
+}
+
+.mobile-alarm-content {
+    font-size: 14px;
+    color: #333;
 }
 
 .mobile-alarm-title {
     margin: 0;
-    margin-left: 20px;
 }
