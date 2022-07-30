@@ -47,6 +47,19 @@ export default function DesktopHeader() {
         AccountButton = <KakaoLogin></KakaoLogin>
     }
 
+    let MoreButton;
+    let AlarmButton;
+    if (isLogin) {
+        MoreButton = <CircleButton
+                        image={require('../../icons/icon_more_dark_grey.png')}
+                        clickEvent={openMoreWindowEvent}></CircleButton>
+        AlarmButton = <CircleButton
+                        image={require('../../icons/icon_notification_dark_grey.png')}
+                        clickEvent={openAlarmWindowEvent}></CircleButton>
+    } else {
+        MoreButton = <div></div>
+    }
+
     return (
         <div className='desktop-header'>
             <div className='desktop-header-left-container'>
@@ -59,17 +72,10 @@ export default function DesktopHeader() {
                 <DesktopNavBar></DesktopNavBar>
             </div>
             <div className='desktop-header-right-container'>
-                <CircleButton
-                    image={require('../../icons/icon_notification_dark_grey.png')}
-                    clickEvent={openAlarmWindowEvent}></CircleButton>
-                <CircleButton
-                    image={require('../../icons/icon_more_dark_grey.png')}
-                    clickEvent={openMoreWindowEvent}></CircleButton>
-                {/* <RoundedButton
-                    text='로그인'></RoundedButton> */}
+                {AlarmButton}
+                {MoreButton}
                 {AccountButton}
                 <div style={{width:'20px'}}></div>
-                
             </div> 
             <SearchWindow></SearchWindow>
             <AlarmWindow></AlarmWindow>
