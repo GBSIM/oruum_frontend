@@ -7,7 +7,7 @@ import PriceRow from '../../unit/PriceRow/PriceRow';
 export default function AssetProfile() {
     const {name, totalAsset, totalAssetChange, totalAssetChangePercentage,
            cash, koreanStock, koreanStockChange, koreanStockChangePercentage,
-           usStock, usStockChange, usStockChangePercentage} = useSelector(state => state.user);
+           usStock, usStockChange, usStockChangePercentage, isLogin} = useSelector(state => state.user);
 
     let Change;
     if (totalAssetChange >= 0) {
@@ -19,9 +19,18 @@ export default function AssetProfile() {
     const cashPecentage = cash/totalAsset*100;
     const koreanStockPercentage = koreanStock/totalAsset*100;
     const usStockPercentage = usStock/totalAsset*100; 
+    
+    let LoginSuggestion;
+    if (!isLogin) {
+        LoginSuggestion = 
+            <div className='login-suggestion'>
+                <h3 className='login-suggestion-text'>자산분석을 원하시면 로그인해주세요!</h3>
+            </div>
+    }
 
     return (
-        <div>
+        <div style={{'position':'relative'}}>
+            {LoginSuggestion}
             <h2 className='content-box-title'>나의 자산</h2>
             <div style={{height:'20px'}}></div>
             <div className='container-right-align'>
@@ -73,7 +82,6 @@ export default function AssetProfile() {
                     percentage={usStockPercentage}
                     color='#074B3F'></PercentageSummary>
             </div>
-
         </div>
     )
 }
