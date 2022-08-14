@@ -23,9 +23,9 @@ export default function Stock() {
                 <div className='content-box top'>
                     <StockProfile></StockProfile>
                 </div>
-                <div className='content-box'>
+                {/* <div className='content-box'>
                     <StockCheckPoint></StockCheckPoint>
-                </div>
+                </div> */}
             </div>
             <MobileFooter></MobileFooter>
             <div className='sub-contents-right'>
