@@ -5,7 +5,9 @@ import React from 'react';
 const {Kakao} = window;
 const loginWithKakao = () =>{
     Kakao.Auth.authorize({
-        redirectUri: 'https://oruum.com'
+        // redirectUri: 'https://oruum.com'
+        // redirectUri: 'http://localhost:3000'
+        redirectUri: process.env.REACT_APP_REDIRECT_URL
     })
 }
 

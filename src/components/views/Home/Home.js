@@ -64,7 +64,7 @@ const KakaoRedirectHandler = () => {
       let grant_type = "authorization_code";
       let client_id = "007d2924772dce6c3712723cae510082";
   
-      axios.post(`https://kauth.kakao.com/oauth/token?grant_type=${grant_type}&client_id=${client_id}&redirect_uri=https://oruum.com&code=${code}`
+      axios.post(`https://kauth.kakao.com/oauth/token?grant_type=${grant_type}&client_id=${client_id}&redirect_uri=${process.env.REACT_APP_REDIRECT_URL}&code=${code}`
           , {
       headers: {
           'Content-type': 'application/x-www-form-urlencoded;charset=utf-8'
